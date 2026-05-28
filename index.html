@@ -1,32 +1,14 @@
-<!DOCTYPE html>
+Si preferís una estructura modular y organizada propia de un proyecto de desarrollo web profesional, dividiendo el código en HTML (index.html), Estilos (styles.css), Lógica (script.js) y la Documentación (README.md), aquí tenés los bloques listos para copiar y pegar en cada archivo.Esta estructura mantiene todas las optimizaciones, gráficos e información de la cátedra de manera prolija.  1. index.htmlEste archivo contiene la estructura y el contenido académico de las diapositivas. Enlaza directamente al archivo de estilos y de scripts locales.  HTML<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Economía Política - FCA UNNE</title>
-    <!-- Reveal.js Estilos base y tema -->
+    <!-- Reveal.js Estilos base y tema de la CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css">
-    
-    <style>
-        :root {
-            --r-main-font: 'Google Sans', Arial, sans-serif;
-            --r-heading-font: 'Google Sans', Arial, sans-serif;
-            --r-heading-color: #1a365d;
-            --r-link-color: #3182ce;
-        }
-        .reveal h1, .reveal h2, .reveal h3 { font-weight: 700; text-transform: none; }
-        .reveal p, .reveal li { color: #2d3748; text-align: left; }
-        .reveal table { font-size: 0.45em; width: 100%; border-collapse: collapse; margin-top: 10px; }
-        .reveal th { background-color: #1a365d; color: white; font-weight: bold; text-align: center; padding: 6px; }
-        .reveal td { border: 1px solid #e2e8f0; padding: 5px; text-align: left; }
-        .reveal tr:nth-child(even) { background-color: #f7fafc; }
-        .flex-container { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-        .flex-child { flex: 1; }
-        .badge { background: #e53e3e; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
-        .img-container img { max-height: 380px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .vector-icon { width: 120px; height: 120px; margin: 0 auto; display: block; }
-    </style>
+    <!-- Tus estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -35,32 +17,32 @@
 
             <!-- SLIDE 1: PORTADA -->
             <section data-background-color="#f7fafc">
-                <h1 style="font-size: 2.2em; color: #1a365d;">ECONOMÍA POLÍTICA</h1>
-                <p style="text-align: center; font-weight: bold; color: #4a5568;">Dpto de Economía | FCA - UNNE</p>
-                <hr style="border: 1px solid #cbd5e0; margin: 20px 0;">
-                <p style="text-align: center; font-size: 0.9em;"><strong>Lic. Juan Pablo Ybarra</strong></p>
-                <p style="text-align: center; font-size: 0.7em; color: #718096;">Clase Inicial | Ciclo Lectivo 2026</p>
+                <h1 class="main-title">ECONOMÍA POLÍTICA</h1>
+                <p class="subtitle">Dpto de Economía | FCA - UNNE</p>
+                <hr class="divider">
+                <p class="professor"><strong>Lic. Juan Pablo Ybarra</strong></p>
+                <p class="date-info">Clase Inicial | Ciclo Lectivo 2026</p>
             </section>
 
             <!-- SLIDE 2: EQUIPO CÁTEDRA -->
             <section>
                 <h2>Profesores de la Cátedra</h2>
-                <ul style="font-size: 0.8em; line-height: 1.6;">
-                    <li><strong>Juan Pablo Ybarra</strong> <span style="color:#718096;">(Lic. en Eco. - Mgs. en Finanzas)</span></li>
-                    <li><strong>Jorge Estoup</strong> <span style="color:#718096;">(Lic. en Eco. - Mgs. en Economía y Desarrollo)</span></li>
-                    <li><strong>Thea Belaustegui</strong> <span style="color:#718096;">(Lic. en Adm. - Mgs. en Empresas de Familia)</span></li>
-                    <li><strong>Mariano Trachta</strong> <span style="color:#718096;">(Ing. Agr. - Mgs. en Agronegocios y Alimentos - Mgs. of Science)</span></li>
-                    <li><strong>Ricardo Rey Leyes</strong> <span style="color:#718096;">(Ayudante Alumno)</span></li>
+                <ul class="professors-list">
+                    <li><strong>Juan Pablo Ybarra</strong> <span class="degree">(Lic. en Eco. - Mgs. en Finanzas)</span></li>
+                    <li><strong>Jorge Estoup</strong> <span class="degree">(Lic. en Eco. - Mgs. en Economía y Desarrollo)</span></li>
+                    <li><strong>Thea Belaustegui</strong> <span class="degree">(Lic. en Adm. - Mgs. en Empresas de Familia)</span></li>
+                    <li><strong>Mariano Trachta</strong> <span class="degree">(Ing. Agr. - Mgs. en Agronegocios y Alimentos - Mgs. of Science)</span></li>
+                    <li><strong>Ricardo Rey Leyes</strong> <span class="degree">(Ayudante Alumno)</span></li>
                 </ul>
-                <div style="background: #edf2f7; padding: 15px; border-radius: 6px; margin-top: 30px; font-size: 0.7em; text-align: center;">
+                <div class="contact-box">
                     <strong>Contacto Cátedra:</strong> economiapoliticacsagr@gmail.com
                 </div>
             </section>
 
             <!-- SLIDE 3: PLAN DE ESTUDIOS -->
             <section>
-                <h3 style="font-size: 1.1em;">Distribución y Carga Horaria en Agronomía</h3>
-                <table>
+                <h3 class="table-title">Distribución y Carga Horaria en Agronomía</h3>
+                <table class="curriculum-table">
                     <thead>
                         <tr>
                             <th>Año</th>
@@ -85,7 +67,7 @@
                         <tr>
                             <td><strong>3º</strong></td>
                             <td>Microbiología Agrícola (84)<br>Zoología Agrícola (96)</td>
-                            <td>Fitopatología (96)<br><span style="background:#feebc8; font-weight:bold; padding: 2px 4px; border-radius:3px;">Economía Política (72)</span><br>Mecanización Agrícola (96)</td>
+                            <td>Fitopatología (96)<br><span class="highlight-subject">Economía Política (72)</span><br>Mecanización Agrícola (96)</td>
                             <td>Nutrición Animal (60)<br>Química Analítica y Agr. (96)<br>Hidrología Agrícola (96)</td>
                         </tr>
                         <tr>
@@ -107,18 +89,18 @@
             <!-- SLIDE 4: REGLAS DE JUEGO - CONDICIONES -->
             <section>
                 <h2>Reglas de Juego: Cursada</h2>
-                <div class="flex-container" style="margin-top: 40px;">
-                    <div class="flex-child" style="background: #c6f6d5; padding: 20px; border-radius: 8px; text-align: center;">
-                        <h3 style="font-size: 1em; margin: 0;">Promocional</h3>
-                        <p style="font-size: 0.65em; margin-top: 10px; text-align: center;">2 Parciales mínimo <b>7 (siete)</b><br>+ 75% de Asistencia.</p>
+                <div class="flex-container space-top">
+                    <div class="flex-child condition-box promotional">
+                        <h3>Promocional</h3>
+                        <p>2 Parciales mínimo <b>7 (siete)</b><br>+ 75% de Asistencia.</p>
                     </div>
-                    <div class="flex-child" style="background: #feebc8; padding: 20px; border-radius: 8px; text-align: center;">
-                        <h3 style="font-size: 1em; margin: 0;">Regular</h3>
-                        <p style="font-size: 0.65em; margin-top: 10px; text-align: center;">2 Parciales mínimo <b>6 (seis)</b> (Opción a 1 recuperatorio)<br>+ 75% de Asistencia.</p>
+                    <div class="flex-child condition-box regular">
+                        <h3>Regular</h3>
+                        <p>2 Parciales mínimo <b>6 (seis)</b> (Opción a 1 recuperatorio)<br>+ 75% de Asistencia.</p>
                     </div>
-                    <div class="flex-child" style="background: #fed7d7; padding: 20px; border-radius: 8px; text-align: center;">
-                        <h3 style="font-size: 1em; margin: 0;">Libre</h3>
-                        <p style="font-size: 0.65em; margin-top: 10px; text-align: center;">Estudiantes que no cumplan las condiciones anteriores.</p>
+                    <div class="flex-child condition-box free">
+                        <h3>Libre</h3>
+                        <p>Estudiantes que no cumplan las condiciones anteriores.</p>
                     </div>
                 </div>
             </section>
@@ -126,23 +108,22 @@
             <!-- SLIDE 5: CRONOGRAMA Y HORARIOS -->
             <section>
                 <h2>Cronograma de Clases 2026</h2>
-                <p style="font-size: 0.8em;"><strong>Clases Sincrónicas (Obligatorias):</strong></p>
-                <ul style="font-size: 0.75em;">
+                <p class="section-sub"><strong>Clases Sincrónicas (Obligatorias):</strong></p>
+                <ul class="schedule-list">
                     <li><b>Martes 16:30 - 17:45 hs:</b> Primera Parte (Teoría)</li>
                     <li><b>Martes 18:00 - 19:30 hs:</b> Segunda Parte (Práctico) → <span class="badge">Traer Calculadora</span></li>
                     <li><b>Viernes 18:00 - 19:30 hs:</b> Teoría / Mecanización (Campito)</li>
                 </ul>
-                <p style="font-size: 0.8em; margin-top: 20px;"><strong>Instancia Asincrónica:</strong></p>
-                <p style="font-size: 0.7em;">Aula Virtual (Automatriculación): Descarga de PPTs, Guías de Trabajos Prácticos y Resoluciones.</p>
+                <p class="section-sub space-top"><strong>Instancia Asincrónica:</strong></p>
+                <p class="async-text">Aula Virtual (Automatriculación): Descarga de PPTs, Guías de Trabajos Prácticos y Resoluciones.</p>
             </section>
 
-            <!-- SLIDE 6: OBJETIVO DE LA CÁTEDRA (Imagen embebida) -->
+            <!-- SLIDE 6: OBJETIVO DE LA CÁTEDRA -->
             <section data-background-color="#1a365d">
-                <h2 style="color: white;">Objetivo de la Cátedra</h2>
-                <p style="color: #e2e8f0; text-align: center; font-size: 1.1em; margin-top: 20px;">Eliminar las "charlas de café"</p>
-                <div class="img-container" style="text-align: center; margin-top: 15px;">
-                    <!-- Imagen en Vector Inline (Reemplazo moderno de hablemos sin saber) -->
-                    <svg class="img-container" style="width: 280px; height: 200px; background: #2d3748; padding: 20px; border-radius: 8px;" viewBox="0 0 200 150">
+                <h2 class="light-text">Objetivo de la Cátedra</h2>
+                <p class="light-sub">Eliminar las "charlas de café"</p>
+                <div class="center-content space-top">
+                    <svg class="svg-meme" viewBox="0 0 200 150">
                         <rect x="20" y="30" width="160" height="70" rx="10" fill="#e53e3e"/>
                         <polygon points="100,100 90,115 110,115" fill="#e53e3e"/>
                         <text x="100" y="60" fill="white" font-family="sans-serif" font-weight="bold" font-size="11" text-anchor="middle">¿HABLEMOS SIN SABER?</text>
@@ -153,15 +134,14 @@
                         <path d="M 145 130 Q 150 135 155 130" stroke="white" stroke-width="2" fill="none"/>
                     </svg>
                 </div>
-                <p style="color: #a0aec0; font-size: 0.55em; text-align: center; margin-top: 15px;">Buscamos pasar del mero sentido común al análisis científico, técnico y modelizado.</p>
+                <p class="light-footer">Buscamos pasar del mero sentido común al análisis científico, técnico y modelizado.</p>
             </section>
 
-            <!-- SLIDE 7: DISPARADOR INICIAL (Icono incorporado en SVG) -->
+            <!-- SLIDE 7: DISPARADOR INICIAL -->
             <section>
                 <h2>¿Qué es la Economía para ustedes?</h2>
-                <div class="flex-container" style="margin-top: 40px;">
-                    <div class="flex-child" style="text-align: center;">
-                        <!-- SVG Asignación de Recursos -->
+                <div class="flex-container space-top">
+                    <div class="flex-child center-content">
                         <svg class="vector-icon" viewBox="0 0 64 64" fill="none" stroke="#2b6cb0" stroke-width="3">
                             <circle cx="32" cy="20" r="12" />
                             <path d="M16 50C16 40 22 36 32 36C42 36 48 40 48 50" />
@@ -169,9 +149,9 @@
                             <path d="M10 20H4M54 20h6M32 5v4M32 54v5" stroke="#ecc94b"/>
                         </svg>
                     </div>
-                    <div class="flex-child" style="background: #edf2f7; padding: 30px; border-radius: 8px;">
-                        <h4 style="margin: 0; color: #2b6cb0;">Concepto Central:</h4>
-                        <p style="font-size: 1.1em; font-weight: bold; margin-top: 10px; line-height: 1.4;">La asignación de recursos escasos para satisfacer necesidades humanas múltiples y crecientes.</p>
+                    <div class="flex-child concept-card">
+                        <h4>Concepto Central:</h4>
+                        <p class="concept-text">La asignación de recursos escasos para satisfacer necesidades humanas múltiples y crecientes.</p>
                     </div>
                 </div>
             </section>
@@ -179,20 +159,19 @@
             <!-- SLIDE 8: ESTUDIO DE CASO: BOTELLA DE AGUA -->
             <section>
                 <h4>La economía detrás de una botella de agua</h4>
-                <p style="font-size: 0.7em; color:#4a5568;">El precio de un mismo bien cambia drásticamente según el entorno del mercado:</p>
+                <p class="section-description">El precio de un mismo bien cambia drásticamente según el entorno del mercado:</p>
                 <div class="flex-container">
-                    <div class="flex-child" style="font-size: 0.65em;">
-                        <ul style="list-style-type: none; padding-left: 0;">
-                            <li style="margin-bottom: 8px;">🛒 <b>Supermercado:</b> $548</li>
-                            <li style="margin-bottom: 8px;">💪 <b>Gimnasio:</b> $799</li>
-                            <li style="margin-bottom: 8px;">🍺 <b>Un Bar:</b> $1.097</li>
-                            <li style="margin-bottom: 8px;">✈️ <b>En un Avión:</b> $1.980</li>
+                    <div class="flex-child list-container">
+                        <ul class="price-list">
+                            <li>🛒 <b>Supermercado:</b> $548</li>
+                            <li>💪 <b>Gimnasio:</b> $799</li>
+                            <li>🍺 <b>Un Bar:</b> $1.097</li>
+                            <li>✈️ <b>En un Avión:</b> $1.980</li>
                         </ul>
-                        <p style="margin-top: 20px; background: #ebf8ff; padding: 10px; border-radius: 4px; font-weight: 500;">Mismo producto, misma agua. Cambia el valor del servicio, el contexto y la escasez relativa.</p>
+                        <p class="case-conclusion">Mismo producto, misma agua. Cambia el valor del servicio, el contexto y la escasez relativa.</p>
                     </div>
-                    <div class="flex-child" style="text-align: center;">
-                        <!-- Dibujo Vectorial Limpio de la Botella -->
-                        <svg viewBox="0 0 100 150" style="width: 130px; height: 180px;">
+                    <div class="flex-child center-content">
+                        <svg viewBox="0 0 100 150" class="bottle-svg">
                             <rect x="40" y="20" width="20" height="15" rx="3" fill="#3182ce" />
                             <path d="M35 45 C35 35, 65 35, 65 45 L65 130 C65 140, 35 140, 35 130 Z" fill="#ebf8ff" stroke="#3182ce" stroke-width="3" />
                             <rect x="35" y="70" width="30" height="25" fill="#3182ce" />
@@ -205,34 +184,29 @@
             <!-- SLIDE 9: CONCEPTUALIZACIÓN -->
             <section>
                 <h2>Precio vs. Valor vs. Costo</h2>
-                <div style="font-size: 0.75em; line-height: 1.6;">
+                <div class="definitions-block">
                     <p>💰 <strong>PRECIO:</strong> La cantidad de dinero que el mercado exige y se paga efectivamente para adquirir el bien.</p>
                     <p>❤️ <strong>VALOR:</strong> La cantidad de dinero que un consumidor está <i>dispuesto a pagar</i> en función de la utilidad o beneficio subjetivo que recibe.</p>
                     <p>🏗️ <strong>COSTO:</strong> El gasto monetario consolidado en insumos y recursos para producir y comercializar el bien.</p>
                 </div>
             </section>
 
-            <!-- SLIDE 10: EXCEDENTE DE DEMANDA (Gráfico conceptual incorporado) -->
+            <!-- SLIDE 10: EXCEDENTE DE DEMANDA -->
             <section>
                 <h3>Excedente de Demanda y Mercados</h3>
                 <div class="flex-container">
-                    <div class="flex-child" style="font-size: 0.65em;">
+                    <div class="flex-child explanation-text">
                         <p>Cuando los reguladores de precios imponen techos artificiales por debajo del equilibrio de mercado, se destruyen los incentivos de oferta y se genera escasez.</p>
-                        <p style="background: #fff5f5; padding: 10px; border-radius: 5px; margin-top: 15px; font-weight: bold;">"El consumidor valora el producto por encima de lo que fija el precio contable obligatorio".</p>
+                        <p class="alert-box">"El consumidor valora el producto por encima de lo que fija el precio contable obligatorio".</p>
                     </div>
-                    <div class="flex-child" style="text-align: center;">
-                        <!-- Gráfico Oferta y Demanda con Precio Máximo -->
-                        <svg viewBox="0 0 120 100" style="width: 250px; height: 200px; background: #f7fafc; padding: 10px; border-radius: 5px;">
+                    <div class="flex-child center-content">
+                        <svg viewBox="0 0 120 100" class="chart-svg">
                             <line x1="15" y1="10" x2="15" y2="85" stroke="#4a5568" stroke-width="2"/>
                             <line x1="15" y1="85" x2="110" y2="85" stroke="#4a5568" stroke-width="2"/>
-                            <!-- Demanda -->
                             <line x1="20" y1="20" x2="100" y2="80" stroke="#e53e3e" stroke-width="2"/>
-                            <!-- Oferta -->
                             <line x1="20" y1="80" x2="100" y2="20" stroke="#3182ce" stroke-width="2"/>
-                            <!-- Precio Máximo Regulado -->
                             <line x1="15" y1="65" x2="110" y2="65" stroke="#ecc94b" stroke-width="2" stroke-dasharray="3"/>
                             <text x="112" y="68" fill="#d69e2e" font-family="sans-serif" font-size="5" font-weight="bold">P. Máx</text>
-                            <!-- Escasez -->
                             <path d="M 40 65 L 80 65" stroke="#e53e3e" stroke-width="3"/>
                             <text x="60" y="60" fill="#e53e3e" font-family="sans-serif" font-size="5" font-weight="bold" text-anchor="middle">ESCASEZ</text>
                         </svg>
@@ -244,16 +218,16 @@
             <section>
                 <h2>Definición Epistemológica</h2>
                 <div class="flex-container">
-                    <div class="flex-child" style="background:#f7fafc; padding:15px; border-radius:6px; font-size:0.65em;">
-                        <h4 style="color:#2c5282; margin: 0 0 8px 0;">Economía Política</h4>
+                    <div class="flex-child category-box">
+                        <h4>Economía Política</h4>
                         <p>Estudio teórico-científico, escuelas de pensamiento y modelizaciones matemáticas. Descubre las leyes de reproducción, distribución e intercambio.</p>
                     </div>
-                    <div class="flex-child" style="background:#f7fafc; padding:15px; border-radius:6px; font-size:0.65em;">
-                        <h4 style="color:#2c5282; margin: 0 0 8px 0;">Política Económica</h4>
+                    <div class="flex-child category-box">
+                        <h4>Política Económica</h4>
                         <p>La praxis institucional. Modificación del comportamiento del mercado en el mundo real mediante políticas estatales (Fiscal, Monetaria, Cambiaria).</p>
                     </div>
                 </div>
-                <div style="background: #e2e8f0; padding: 12px; margin-top: 20px; font-size: 0.65em; border-radius: 6px; font-weight: 500;">
+                <div class="book-definition">
                     <strong>Definición Clásica de Libro:</strong> Ciencia social que estudia los procesos de producción, intercambio y consumo de bienes para satisfacer necesidades ilimitadas mediante recursos escasos.
                 </div>
             </section>
@@ -261,37 +235,31 @@
             <!-- SLIDE 12: EL DEBATE DE LOS RECURSOS -->
             <section>
                 <h2>Población y Disponibilidad de Recursos</h2>
-                <div class="flex-container" style="font-size: 0.65em; margin-top: 20px;">
-                    <div class="flex-child" style="background:#edf2f7; padding:12px; border-radius:6px;">
-                        <h4 style="margin:0 0 5px 0; color:#2c5282;">Thomas Malthus</h4>
-                        <p style="font-size:0.95em;"><b>Pensador Inglés.</b> Argumentó que la población crece de forma geométrica mientras los recursos lo hacen de forma aritmética, conduciendo a rendimientos decrecientes inevitables.</p>
+                <div class="flex-container space-top no-gap">
+                    <div class="flex-child debate-card">
+                        <h4>Thomas Malthus</h4>
+                        <p><b>Pensador Inglés.</b> Argumentó que la población crece de forma geométrica mientras los recursos lo hacen de forma aritmética, conduciendo a rendimientos decrecientes inevitables.</p>
                     </div>
-                    <div class="flex-child" style="background:#edf2f7; padding:12px; border-radius:6px;">
-                        <h4 style="margin:0 0 5px 0; color:#2c5282;">Ester Boserup</h4>
-                        <p style="font-size:0.95em;"><b>Economista Danesa.</b> Postuló que la presión demográfica actúa como un motor que estimula la innovación tecnológica agrícola y los cambios institucionales.</p>
+                    <div class="flex-child debate-card">
+                        <h4>Ester Boserup</h4>
+                        <p><b>Economista Danesa.</b> Postuló que la presión demográfica actúa como un motor que estimula la innovación tecnológica agrícola y los cambios institucionales.</p>
                     </div>
-                    <div class="flex-child" style="background:#edf2f7; padding:12px; border-radius:6px;">
-                        <h4 style="margin:0 0 5px 0; color:#2c5282;">Julian Simon</h4>
-                        <p style="font-size:0.95em;"><b>Teórico Económico.</b> Sostuvo que la mente, el ingenio y la capacidad organizativa de los seres humanos constituyen el recurso definitivo frente a límites físicos.</p>
+                    <div class="flex-child debate-card">
+                        <h4>Julian Simon</h4>
+                        <p><b>Teórico Económico.</b> Sostuvo que la mente, el ingenio y la capacidad organizativa de los seres humanos constituyen el recurso definitivo frente a límites físicos.</p>
                     </div>
                 </div>
-                <p style="background:#e6fffa; text-align:center; font-size:0.65em; font-weight:bold; padding:10px; border-radius:4px; margin-top:20px;">La tecnología es la variable determinante para expandir las fronteras productivas en el largo plazo.</p>
+                <div class="tech-conclusion">
+                    La tecnología es la variable determinante para expandir las fronteras productivas en el largo plazo.
+                </div>
             </section>
 
         </div>
     </div>
 
-    <!-- Scripts de Reveal.js -->
+    <!-- Carga de Reveal.js principal -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
-    <script>
-        Reveal.initialize({
-            hash: true,
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,
-            transition: 'slide'
-        });
-    </script>
+    <!-- Tu script personalizado de inicialización -->
+    <script src="script.js"></script>
 </body>
 </html>
