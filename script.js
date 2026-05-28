@@ -1,1 +1,21 @@
-const toggle=document.querySelector('.nav-toggle');const links=document.querySelector('.nav-links');if(toggle){toggle.addEventListener('click',()=>links.classList.toggle('open'));}const gallery=document.getElementById('slideGallery');if(gallery){for(let i=1;i<=38;i++){const n=String(i).padStart(2,'0');const item=document.createElement('a');item.className='slide-thumb';item.href=`assets/slides/slide-${n}.png`;item.target='_blank';item.rel='noopener';item.innerHTML=`<img src="assets/slides/slide-${n}.png" alt="Diapositiva ${i} de la presentación original"><span>Diapositiva ${i}</span>`;gallery.appendChild(item);}}
+// Inicialización del framework Reveal.js con configuraciones optimizadas
+Reveal.initialize({
+    // Muestra las flechas de navegación en la esquina inferior derecha
+    controls: true,
+    
+    // Muestra la barra de progreso en la parte inferior de la pantalla
+    progress: true,
+    
+    // Almacena el número de la slide actual en la URL (permite refrescar sin perder la diapositiva)
+    hash: true,
+    history: true,
+    
+    // Centra verticalmente el contenido de cada slide de forma automática
+    center: true,
+    
+    // Tipo de transición entre diapositivas ('slide', 'fade', 'convex', 'concave', 'zoom' o 'none')
+    transition: 'slide',
+    
+    // Velocidad de la transición (default / fast / slow)
+    transitionSpeed: 'default'
+});
