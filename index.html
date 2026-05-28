@@ -1,242 +1,297 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Economía Política | FCA - UNNE</title>
-  <meta name="description" content="Clase inicial de Economía Política - Departamento de Economía, Facultad de Ciencias Agrarias, UNNE." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economía Política - FCA UNNE</title>
+    <!-- Reveal.js Estilos base y tema -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css">
+    
+    <style>
+        :root {
+            --r-main-font: 'Google Sans', Arial, sans-serif;
+            --r-heading-font: 'Google Sans', Arial, sans-serif;
+            --r-heading-color: #1a365d;
+            --r-link-color: #3182ce;
+        }
+        .reveal h1, .reveal h2, .reveal h3 { font-weight: 700; text-transform: none; }
+        .reveal p, .reveal li { color: #2d3748; text-align: left; }
+        .reveal table { font-size: 0.45em; width: 100%; border-collapse: collapse; margin-top: 10px; }
+        .reveal th { background-color: #1a365d; color: white; font-weight: bold; text-align: center; padding: 6px; }
+        .reveal td { border: 1px solid #e2e8f0; padding: 5px; text-align: left; }
+        .reveal tr:nth-child(even) { background-color: #f7fafc; }
+        .flex-container { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+        .flex-child { flex: 1; }
+        .badge { background: #e53e3e; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+        .img-container img { max-height: 380px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .vector-icon { width: 120px; height: 120px; margin: 0 auto; display: block; }
+    </style>
 </head>
 <body>
-  <header class="hero" id="inicio">
-    <nav class="nav">
-      <a class="brand" href="#inicio"><span>EP</span> Economía Política</a>
-      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
-      <div class="nav-links">
-        <a href="#catedra">Cátedra</a>
-        <a href="#cronograma">Cronograma</a>
-        <a href="#reglas">Reglas</a>
-        <a href="#bibliografia">Bibliografía</a>
-        <a href="#conceptos">Conceptos</a>
-        <a href="#ppt">PPT original</a>
-      </div>
-    </nav>
-    <div class="hero-grid wrapper">
-      <div class="hero-copy">
-        <p class="eyebrow">FCA · UNNE · Departamento de Economía</p>
-        <h1>Economía Política</h1>
-        <p class="lead">Clase inicial orientada a presentar el equipo docente, las reglas de cursado, el cronograma de trabajo y los primeros problemas conceptuales de la asignatura.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#cronograma">Ver cronograma</a>
-          <a class="btn secondary" href="#ppt">Ver presentación original</a>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- SLIDE 1: PORTADA -->
+            <section data-background-color="#f7fafc">
+                <h1 style="font-size: 2.2em; color: #1a365d;">ECONOMÍA POLÍTICA</h1>
+                <p style="text-align: center; font-weight: bold; color: #4a5568;">Dpto de Economía | FCA - UNNE</p>
+                <hr style="border: 1px solid #cbd5e0; margin: 20px 0;">
+                <p style="text-align: center; font-size: 0.9em;"><strong>Lic. Juan Pablo Ybarra</strong></p>
+                <p style="text-align: center; font-size: 0.7em; color: #718096;">Clase Inicial | Ciclo Lectivo 2026</p>
+            </section>
+
+            <!-- SLIDE 2: EQUIPO CÁTEDRA -->
+            <section>
+                <h2>Profesores de la Cátedra</h2>
+                <ul style="font-size: 0.8em; line-height: 1.6;">
+                    <li><strong>Juan Pablo Ybarra</strong> <span style="color:#718096;">(Lic. en Eco. - Mgs. en Finanzas)</span></li>
+                    <li><strong>Jorge Estoup</strong> <span style="color:#718096;">(Lic. en Eco. - Mgs. en Economía y Desarrollo)</span></li>
+                    <li><strong>Thea Belaustegui</strong> <span style="color:#718096;">(Lic. en Adm. - Mgs. en Empresas de Familia)</span></li>
+                    <li><strong>Mariano Trachta</strong> <span style="color:#718096;">(Ing. Agr. - Mgs. en Agronegocios y Alimentos - Mgs. of Science)</span></li>
+                    <li><strong>Ricardo Rey Leyes</strong> <span style="color:#718096;">(Ayudante Alumno)</span></li>
+                </ul>
+                <div style="background: #edf2f7; padding: 15px; border-radius: 6px; margin-top: 30px; font-size: 0.7em; text-align: center;">
+                    <strong>Contacto Cátedra:</strong> economiapoliticacsagr@gmail.com
+                </div>
+            </section>
+
+            <!-- SLIDE 3: PLAN DE ESTUDIOS -->
+            <section>
+                <h3 style="font-size: 1.1em;">Distribución y Carga Horaria en Agronomía</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Año</th>
+                            <th>1º Trimestre (Hs)</th>
+                            <th>2º Trimestre (Hs)</th>
+                            <th>3º Trimestre (Hs)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1º</strong></td>
+                            <td>Matemática I (96)<br>Química Gral. e Inorg. (96)</td>
+                            <td>Matemática II (96)<br>Morfología de Pl. Vasc. (96)<br>Genética (60)</td>
+                            <td>Física I (96)<br>Agroclimatología (88)<br>Introducción Cs. Agr. (36)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2º</strong></td>
+                            <td>Física II (60)<br>Química Org. y Biol. (96)</td>
+                            <td>Anatomía y Fisiol. Animal (96)<br>Cálculo Estad. y Biom. (96)</td>
+                            <td>Fisiología Vegetal (96)<br>Edafología (96)<br>Botánica Sist. y Fitog. (84)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3º</strong></td>
+                            <td>Microbiología Agrícola (84)<br>Zoología Agrícola (96)</td>
+                            <td>Fitopatología (96)<br><span style="background:#feebc8; font-weight:bold; padding: 2px 4px; border-radius:3px;">Economía Política (72)</span><br>Mecanización Agrícola (96)</td>
+                            <td>Nutrición Animal (60)<br>Química Analítica y Agr. (96)<br>Hidrología Agrícola (96)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4º</strong></td>
+                            <td>Ecofisiología (30)<br>Terapéutica Vegetal (96)<br>Forrajicultura (96)</td>
+                            <td>Sociología y Ext. Rural (36)<br>Economía Agraria (48)<br>Manejo y Cons. Suelos (84)</td>
+                            <td>Recursos Naturales (30)<br>Fruticultura (48)<br>Silvicultura (72)<br>Cultivos I (36)<br>Cultivos II (48)<br>Zootecnia (88)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5º</strong></td>
+                            <td>Cultivos III (48)<br>Horticultura (48)<br>Cultivos I (36)<br>Admin. y Leg. Agraria (60)</td>
+                            <td>Materias Optativas (300)</td>
+                            <td>Proyecto y Planif. Agropec. (30)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SLIDE 4: REGLAS DE JUEGO - CONDICIONES -->
+            <section>
+                <h2>Reglas de Juego: Cursada</h2>
+                <div class="flex-container" style="margin-top: 40px;">
+                    <div class="flex-child" style="background: #c6f6d5; padding: 20px; border-radius: 8px; text-align: center;">
+                        <h3 style="font-size: 1em; margin: 0;">Promocional</h3>
+                        <p style="font-size: 0.65em; margin-top: 10px; text-align: center;">2 Parciales mínimo <b>7 (siete)</b><br>+ 75% de Asistencia.</p>
+                    </div>
+                    <div class="flex-child" style="background: #feebc8; padding: 20px; border-radius: 8px; text-align: center;">
+                        <h3 style="font-size: 1em; margin: 0;">Regular</h3>
+                        <p style="font-size: 0.65em; margin-top: 10px; text-align: center;">2 Parciales mínimo <b>6 (seis)</b> (Opción a 1 recuperatorio)<br>+ 75% de Asistencia.</p>
+                    </div>
+                    <div class="flex-child" style="background: #fed7d7; padding: 20px; border-radius: 8px; text-align: center;">
+                        <h3 style="font-size: 1em; margin: 0;">Libre</h3>
+                        <p style="font-size: 0.65em; margin-top: 10px; text-align: center;">Estudiantes que no cumplan las condiciones anteriores.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: CRONOGRAMA Y HORARIOS -->
+            <section>
+                <h2>Cronograma de Clases 2026</h2>
+                <p style="font-size: 0.8em;"><strong>Clases Sincrónicas (Obligatorias):</strong></p>
+                <ul style="font-size: 0.75em;">
+                    <li><b>Martes 16:30 - 17:45 hs:</b> Primera Parte (Teoría)</li>
+                    <li><b>Martes 18:00 - 19:30 hs:</b> Segunda Parte (Práctico) → <span class="badge">Traer Calculadora</span></li>
+                    <li><b>Viernes 18:00 - 19:30 hs:</b> Teoría / Mecanización (Campito)</li>
+                </ul>
+                <p style="font-size: 0.8em; margin-top: 20px;"><strong>Instancia Asincrónica:</strong></p>
+                <p style="font-size: 0.7em;">Aula Virtual (Automatriculación): Descarga de PPTs, Guías de Trabajos Prácticos y Resoluciones.</p>
+            </section>
+
+            <!-- SLIDE 6: OBJETIVO DE LA CÁTEDRA (Imagen embebida) -->
+            <section data-background-color="#1a365d">
+                <h2 style="color: white;">Objetivo de la Cátedra</h2>
+                <p style="color: #e2e8f0; text-align: center; font-size: 1.1em; margin-top: 20px;">Eliminar las "charlas de café"</p>
+                <div class="img-container" style="text-align: center; margin-top: 15px;">
+                    <!-- Imagen en Vector Inline (Reemplazo moderno de hablemos sin saber) -->
+                    <svg class="img-container" style="width: 280px; height: 200px; background: #2d3748; padding: 20px; border-radius: 8px;" viewBox="0 0 200 150">
+                        <rect x="20" y="30" width="160" height="70" rx="10" fill="#e53e3e"/>
+                        <polygon points="100,100 90,115 110,115" fill="#e53e3e"/>
+                        <text x="100" y="60" fill="white" font-family="sans-serif" font-weight="bold" font-size="11" text-anchor="middle">¿HABLEMOS SIN SABER?</text>
+                        <text x="100" y="80" fill="#fed7d7" font-family="sans-serif" font-size="9" text-anchor="middle">Fundamentos vs. Opinión</text>
+                        <circle cx="50" cy="130" r="12" fill="#4a5568"/>
+                        <circle cx="150" cy="130" r="12" fill="#4a5568"/>
+                        <path d="M 45 130 Q 50 125 55 130" stroke="white" stroke-width="2" fill="none"/>
+                        <path d="M 145 130 Q 150 135 155 130" stroke="white" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                <p style="color: #a0aec0; font-size: 0.55em; text-align: center; margin-top: 15px;">Buscamos pasar del mero sentido común al análisis científico, técnico y modelizado.</p>
+            </section>
+
+            <!-- SLIDE 7: DISPARADOR INICIAL (Icono incorporado en SVG) -->
+            <section>
+                <h2>¿Qué es la Economía para ustedes?</h2>
+                <div class="flex-container" style="margin-top: 40px;">
+                    <div class="flex-child" style="text-align: center;">
+                        <!-- SVG Asignación de Recursos -->
+                        <svg class="vector-icon" viewBox="0 0 64 64" fill="none" stroke="#2b6cb0" stroke-width="3">
+                            <circle cx="32" cy="20" r="12" />
+                            <path d="M16 50C16 40 22 36 32 36C42 36 48 40 48 50" />
+                            <circle cx="32" cy="20" r="4" fill="#2b6cb0" />
+                            <path d="M10 20H4M54 20h6M32 5v4M32 54v5" stroke="#ecc94b"/>
+                        </svg>
+                    </div>
+                    <div class="flex-child" style="background: #edf2f7; padding: 30px; border-radius: 8px;">
+                        <h4 style="margin: 0; color: #2b6cb0;">Concepto Central:</h4>
+                        <p style="font-size: 1.1em; font-weight: bold; margin-top: 10px; line-height: 1.4;">La asignación de recursos escasos para satisfacer necesidades humanas múltiples y crecientes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: ESTUDIO DE CASO: BOTELLA DE AGUA -->
+            <section>
+                <h4>La economía detrás de una botella de agua</h4>
+                <p style="font-size: 0.7em; color:#4a5568;">El precio de un mismo bien cambia drásticamente según el entorno del mercado:</p>
+                <div class="flex-container">
+                    <div class="flex-child" style="font-size: 0.65em;">
+                        <ul style="list-style-type: none; padding-left: 0;">
+                            <li style="margin-bottom: 8px;">🛒 <b>Supermercado:</b> $548</li>
+                            <li style="margin-bottom: 8px;">💪 <b>Gimnasio:</b> $799</li>
+                            <li style="margin-bottom: 8px;">🍺 <b>Un Bar:</b> $1.097</li>
+                            <li style="margin-bottom: 8px;">✈️ <b>En un Avión:</b> $1.980</li>
+                        </ul>
+                        <p style="margin-top: 20px; background: #ebf8ff; padding: 10px; border-radius: 4px; font-weight: 500;">Mismo producto, misma agua. Cambia el valor del servicio, el contexto y la escasez relativa.</p>
+                    </div>
+                    <div class="flex-child" style="text-align: center;">
+                        <!-- Dibujo Vectorial Limpio de la Botella -->
+                        <svg viewBox="0 0 100 150" style="width: 130px; height: 180px;">
+                            <rect x="40" y="20" width="20" height="15" rx="3" fill="#3182ce" />
+                            <path d="M35 45 C35 35, 65 35, 65 45 L65 130 C65 140, 35 140, 35 130 Z" fill="#ebf8ff" stroke="#3182ce" stroke-width="3" />
+                            <rect x="35" y="70" width="30" height="25" fill="#3182ce" />
+                            <text x="50" y="86" fill="white" font-family="sans-serif" font-size="7" font-weight="bold" text-anchor="middle">AGUA</text>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 9: CONCEPTUALIZACIÓN -->
+            <section>
+                <h2>Precio vs. Valor vs. Costo</h2>
+                <div style="font-size: 0.75em; line-height: 1.6;">
+                    <p>💰 <strong>PRECIO:</strong> La cantidad de dinero que el mercado exige y se paga efectivamente para adquirir el bien.</p>
+                    <p>❤️ <strong>VALOR:</strong> La cantidad de dinero que un consumidor está <i>dispuesto a pagar</i> en función de la utilidad o beneficio subjetivo que recibe.</p>
+                    <p>🏗️ <strong>COSTO:</strong> El gasto monetario consolidado en insumos y recursos para producir y comercializar el bien.</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 10: EXCEDENTE DE DEMANDA (Gráfico conceptual incorporado) -->
+            <section>
+                <h3>Excedente de Demanda y Mercados</h3>
+                <div class="flex-container">
+                    <div class="flex-child" style="font-size: 0.65em;">
+                        <p>Cuando los reguladores de precios imponen techos artificiales por debajo del equilibrio de mercado, se destruyen los incentivos de oferta y se genera escasez.</p>
+                        <p style="background: #fff5f5; padding: 10px; border-radius: 5px; margin-top: 15px; font-weight: bold;">"El consumidor valora el producto por encima de lo que fija el precio contable obligatorio".</p>
+                    </div>
+                    <div class="flex-child" style="text-align: center;">
+                        <!-- Gráfico Oferta y Demanda con Precio Máximo -->
+                        <svg viewBox="0 0 120 100" style="width: 250px; height: 200px; background: #f7fafc; padding: 10px; border-radius: 5px;">
+                            <line x1="15" y1="10" x2="15" y2="85" stroke="#4a5568" stroke-width="2"/>
+                            <line x1="15" y1="85" x2="110" y2="85" stroke="#4a5568" stroke-width="2"/>
+                            <!-- Demanda -->
+                            <line x1="20" y1="20" x2="100" y2="80" stroke="#e53e3e" stroke-width="2"/>
+                            <!-- Oferta -->
+                            <line x1="20" y1="80" x2="100" y2="20" stroke="#3182ce" stroke-width="2"/>
+                            <!-- Precio Máximo Regulado -->
+                            <line x1="15" y1="65" x2="110" y2="65" stroke="#ecc94b" stroke-width="2" stroke-dasharray="3"/>
+                            <text x="112" y="68" fill="#d69e2e" font-family="sans-serif" font-size="5" font-weight="bold">P. Máx</text>
+                            <!-- Escasez -->
+                            <path d="M 40 65 L 80 65" stroke="#e53e3e" stroke-width="3"/>
+                            <text x="60" y="60" fill="#e53e3e" font-family="sans-serif" font-size="5" font-weight="bold" text-anchor="middle">ESCASEZ</text>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 11: DEFINICIÓN DE LA CIENCIA -->
+            <section>
+                <h2>Definición Epistemológica</h2>
+                <div class="flex-container">
+                    <div class="flex-child" style="background:#f7fafc; padding:15px; border-radius:6px; font-size:0.65em;">
+                        <h4 style="color:#2c5282; margin: 0 0 8px 0;">Economía Política</h4>
+                        <p>Estudio teórico-científico, escuelas de pensamiento y modelizaciones matemáticas. Descubre las leyes de reproducción, distribución e intercambio.</p>
+                    </div>
+                    <div class="flex-child" style="background:#f7fafc; padding:15px; border-radius:6px; font-size:0.65em;">
+                        <h4 style="color:#2c5282; margin: 0 0 8px 0;">Política Económica</h4>
+                        <p>La praxis institucional. Modificación del comportamiento del mercado en el mundo real mediante políticas estatales (Fiscal, Monetaria, Cambiaria).</p>
+                    </div>
+                </div>
+                <div style="background: #e2e8f0; padding: 12px; margin-top: 20px; font-size: 0.65em; border-radius: 6px; font-weight: 500;">
+                    <strong>Definición Clásica de Libro:</strong> Ciencia social que estudia los procesos de producción, intercambio y consumo de bienes para satisfacer necesidades ilimitadas mediante recursos escasos.
+                </div>
+            </section>
+
+            <!-- SLIDE 12: EL DEBATE DE LOS RECURSOS -->
+            <section>
+                <h2>Población y Disponibilidad de Recursos</h2>
+                <div class="flex-container" style="font-size: 0.65em; margin-top: 20px;">
+                    <div class="flex-child" style="background:#edf2f7; padding:12px; border-radius:6px;">
+                        <h4 style="margin:0 0 5px 0; color:#2c5282;">Thomas Malthus</h4>
+                        <p style="font-size:0.95em;"><b>Pensador Inglés.</b> Argumentó que la población crece de forma geométrica mientras los recursos lo hacen de forma aritmética, conduciendo a rendimientos decrecientes inevitables.</p>
+                    </div>
+                    <div class="flex-child" style="background:#edf2f7; padding:12px; border-radius:6px;">
+                        <h4 style="margin:0 0 5px 0; color:#2c5282;">Ester Boserup</h4>
+                        <p style="font-size:0.95em;"><b>Economista Danesa.</b> Postuló que la presión demográfica actúa como un motor que estimula la innovación tecnológica agrícola y los cambios institucionales.</p>
+                    </div>
+                    <div class="flex-child" style="background:#edf2f7; padding:12px; border-radius:6px;">
+                        <h4 style="margin:0 0 5px 0; color:#2c5282;">Julian Simon</h4>
+                        <p style="font-size:0.95em;"><b>Teórico Económico.</b> Sostuvo que la mente, el ingenio y la capacidad organizativa de los seres humanos constituyen el recurso definitivo frente a límites físicos.</p>
+                    </div>
+                </div>
+                <p style="background:#e6fffa; text-align:center; font-size:0.65em; font-weight:bold; padding:10px; border-radius:4px; margin-top:20px;">La tecnología es la variable determinante para expandir las fronteras productivas en el largo plazo.</p>
+            </section>
+
         </div>
-      </div>
-      <figure class="slide-feature">
-        <img src="assets/slides/slide-01.png" alt="Portada de la clase inicial de Economía Política" />
-        <figcaption>Martes 2 de junio de 2026 · Lic. Juan Pablo Ybarra</figcaption>
-      </figure>
     </div>
-  </header>
 
-  <main>
-    <!-- Cátedra -->
-    <section class="section wrapper" id="catedra">
-      <div class="section-title centered">
-        <p class="eyebrow">Presentación de la materia</p>
-        <h2>Equipo docente y enfoque inicial</h2>
-        <p>La materia combina teoría, práctica, actualidad económica y lectura crítica de información pública.</p>
-      </div>
-      <div class="cards five">
-        <article class="card"><h3>Juan Pablo Ybarra</h3><p>Lic. en Economía · Mgs. en Finanzas</p></article>
-        <article class="card"><h3>Jorge Estoup</h3><p>Lic. en Economía · Mgs. en Economía y Desarrollo</p></article>
-        <article class="card"><h3>Thea Belaustegui</h3><p>Lic. en Administración · Mgs. en Empresas de Fliar.</p></article>
-        <article class="card"><h3>Mariano Tractha</h3><p>Ing. Agr. · Mgs. en Agronegocios y Alimentos · Mgs. of Science</p></article>
-        <article class="card"><h3>Ricardo</h3><p>Ayudante alumno</p></article>
-      </div>
-      <div class="notice"><strong>Mail de la cátedra:</strong> <a href="mailto:economiapoliticacsagr@gmail.com">economiapoliticacsagr@gmail.com</a></div>
-      <div class="visual-pair">
-        <figure><img src="assets/slides/slide-02.png" alt="Diapositiva de profesores de Economía Política"><figcaption>Equipo docente original</figcaption></figure>
-        <figure><img src="assets/slides/slide-03.png" alt="Plan de estudio con asignaturas de economía"><figcaption>Ubicación en el plan de estudio</figcaption></figure>
-      </div>
-    </section>
-
-    <!-- Preguntas y disparadores -->
-    <section class="section alt" id="disparadores">
-      <div class="wrapper grid-2">
-        <div>
-          <p class="eyebrow">Disparadores de clase</p>
-          <h2>Preguntas para abrir la discusión</h2>
-          <p>La clase parte de situaciones simples para separar percepciones, precios, costos y valor. El objetivo es entrenar una mirada económica aplicada a problemas concretos.</p>
-          <ul class="clean-list">
-            <li>¿Qué valora realmente un consumidor?</li>
-            <li>¿Cuándo el precio responde a la competencia?</li>
-            <li>¿Cuándo el precio responde al mercado?</li>
-            <li>¿Cómo se diferencia precio, valor y costo?</li>
-          </ul>
-        </div>
-        <div class="visual-stack">
-          <img src="assets/slides/slide-07.png" alt="Noticia o publicación sobre excedente de demanda">
-          <img src="assets/slides/slide-08.png" alt="Disparador sobre precio reactivo a competencia y mercados">
-        </div>
-      </div>
-    </section>
-
-    <!-- Precio Valor Costo -->
-    <section class="section wrapper" id="precio-valor-costo">
-      <div class="section-title centered">
-        <p class="eyebrow">Primer concepto operativo</p>
-        <h2>Diferencia entre precio, valor y costo</h2>
-      </div>
-      <div class="cards three emphasis">
-        <article class="card"><span class="tag">Valor</span><p>Es la cantidad de dinero que una persona está dispuesta a pagar según los beneficios que percibe.</p></article>
-        <article class="card"><span class="tag">Costo</span><p>Es la cantidad de dinero necesaria para producir y comercializar un bien o servicio.</p></article>
-        <article class="card"><span class="tag">Precio</span><p>Es la cantidad de dinero que debe pagarse para comprar el bien.</p></article>
-      </div>
-      <figure class="wide-visual"><img src="assets/slides/slide-09.png" alt="Diapositiva sobre diferencia entre precio, valor y costo"></figure>
-    </section>
-
-    <!-- Objetivo -->
-    <section class="statement">
-      <div class="wrapper">
-        <p class="eyebrow">Objetivo ideal de la cátedra</p>
-        <h2>Eliminar “las charlas de café”</h2>
-        <p>Pasar de la opinión intuitiva a la lectura fundada de problemas económicos, noticias, datos y reglas de funcionamiento de los mercados.</p>
-      </div>
-    </section>
-
-    <!-- Cronograma -->
-    <section class="section wrapper" id="cronograma">
-      <div class="section-title centered">
-        <p class="eyebrow">Organización del cursado</p>
-        <h2>Cronograma de clases y fechas importantes</h2>
-      </div>
-      <div class="schedule-grid">
-        <article class="schedule-card"><h3>Clases sincrónicas</h3><p><strong>Martes 16:30 a 17:45</strong><br>Primera parte · Teoría</p><p><strong>Martes 18:00 a 19:30</strong><br>Segunda parte · Práctico · Traer calculadora</p><p><strong>Viernes 18:00 a 19:30</strong><br>Teoría · Mecanización / campito</p></article>
-        <article class="schedule-card"><h3>Trabajo asincrónico</h3><p>Aula virtual con automatriculación.</p><p>Materiales: PPT de clases, guías de trabajos prácticos y resoluciones.</p></article>
-        <article class="schedule-card"><h3>Fechas relevantes</h3><p>Feriado previsto: viernes 10 de julio.</p><p>Receso de invierno: 13 al 24 de julio.</p><p>Parciales: 3/7 y 1/9. Recuperatorio: 4/9.</p></article>
-      </div>
-      <div class="timeline">
-        <div><span>2 jun · 7 jul</span><strong>Primera parte</strong><p>Unidades 1 a 5 · Principios y microeconomía · teoría, prácticos, 2 charlas y 1 parcial.</p></div>
-        <div><span>28 jul · 4 sept</span><strong>Segunda parte</strong><p>Unidades 6 a 10 · Macroeconomía · teoría, prácticos, 1 charla, 1 parcial, recuperatorio y viaje de mecanización.</p></div>
-      </div>
-      <div class="visual-pair">
-        <figure><img src="assets/slides/slide-12.png" alt="Cronograma días de clases"><figcaption>Días de clases</figcaption></figure>
-        <figure><img src="assets/slides/slide-15.png" alt="Cronograma primera y segunda parte"><figcaption>Organización por unidades</figcaption></figure>
-      </div>
-      <div class="notice warning"><strong>Revisión sugerida:</strong> controlar la correspondencia entre fechas y días de la semana antes de publicar.</div>
-    </section>
-
-    <!-- Reglas -->
-    <section class="section alt" id="reglas">
-      <div class="wrapper">
-        <div class="section-title centered">
-          <p class="eyebrow">Reglas de juego</p>
-          <h2>Condiciones y sistema de aprobación</h2>
-        </div>
-        <div class="cards three approval">
-          <article class="card"><h3>Promoción</h3><p>Aprobar los dos parciales con mínimo de 7.</p><p>Asistencia mínima: 75%.</p></article>
-          <article class="card"><h3>Regular</h3><p>Aprobar los dos parciales con mínimo de 6.</p><p>Incluye opción de un recuperatorio. Asistencia mínima: 75%.</p></article>
-          <article class="card"><h3>Libre</h3><p>Condición para quienes no cumplan los requisitos anteriores.</p></article>
-        </div>
-        <div class="visual-pair">
-          <figure><img src="assets/slides/slide-18.png" alt="Sistema de aprobación"><figcaption>Sistema de aprobación</figcaption></figure>
-          <figure><img src="assets/slides/slide-19.png" alt="Parciales año 2025"><figcaption>Antecedente de parciales 2025</figcaption></figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bibliografía -->
-    <section class="section wrapper" id="bibliografia">
-      <div class="section-title centered">
-        <p class="eyebrow">Materiales de estudio</p>
-        <h2>Bibliografía, actualidad e interés social</h2>
-      </div>
-      <div class="cards four">
-        <article class="card"><h3>Clases</h3><p>Las presentaciones funcionan como guía de lectura y organización conceptual.</p></article>
-        <article class="card"><h3>Estudio personal</h3><p>El aprendizaje se completa con lectura, práctica y resolución de ejercicios.</p></article>
-        <article class="card"><h3>Actualidad</h3><p>La lectura de noticias permite aplicar conceptos económicos a hechos concretos.</p></article>
-        <article class="card"><h3>Interés social</h3><p>La economía se aborda como ciencia social con impacto en personas, producción y territorio.</p></article>
-      </div>
-      <div class="visual-pair">
-        <figure><img src="assets/slides/slide-22.png" alt="Bibliografía clases estudio personal interés social"><figcaption>Ejes de bibliografía</figcaption></figure>
-        <figure><img src="assets/slides/slide-23.png" alt="Bibliografía actualidad y kiosko net"><figcaption>Actualidad económica</figcaption></figure>
-      </div>
-    </section>
-
-    <!-- Conceptos -->
-    <section class="section alt" id="conceptos">
-      <div class="wrapper">
-        <div class="section-title centered">
-          <p class="eyebrow">Qué vamos a ver</p>
-          <h2>Conceptos iniciales de Economía Política</h2>
-        </div>
-        <div class="concept-grid">
-          <article><h3>Agronomía y economía</h3><p>La agronomía trabaja sobre la generación sustentable de alimentos. La economía modeliza fenómenos con impactos sociales.</p></article>
-          <article><h3>Economía política</h3><p>Estudia saberes, teorías, pensamientos, modelizaciones y relaciones entre producción e intercambio.</p></article>
-          <article><h3>Política económica</h3><p>Aplica conceptos teóricos para modificar comportamientos mediante instrumentos fiscales, monetarios, cambiarios y regulatorios.</p></article>
-          <article><h3>Definición tradicional</h3><p>La economía estudia extracción, producción, intercambio, distribución y consumo de bienes y servicios frente a necesidades múltiples y recursos escasos.</p></article>
-        </div>
-        <div class="visual-pair">
-          <figure><img src="assets/slides/slide-26.png" alt="Agronomía y economía"><figcaption>Agronomía y economía</figcaption></figure>
-          <figure><img src="assets/slides/slide-27.png" alt="Economía política y política económica"><figcaption>Diferencia fundamental</figcaption></figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- Malthus y tecnología -->
-    <section class="section wrapper" id="malthus">
-      <div class="section-title centered">
-        <p class="eyebrow">Población, recursos y tecnología</p>
-        <h2>De los límites malthusianos a los rendimientos crecientes</h2>
-        <p>El problema de la escasez no desaparece, se transforma con la tecnología, la productividad y la organización social.</p>
-      </div>
-      <div class="cards three">
-        <article class="card"><h3>Malthus</h3><p>El crecimiento poblacional presionaría sobre recursos fijos como tierra y minerales, generando rendimientos decrecientes.</p></article>
-        <article class="card"><h3>Tecnología</h3><p>La innovación permite alimentar a una población creciente y elevar la productividad por hectárea.</p></article>
-        <article class="card"><h3>Productividad</h3><p>En 50 años, la producción de granos por hectárea se duplicó o incluso se triplicó en algunos cultivos.</p></article>
-      </div>
-      <div class="visual-pair">
-        <figure><img src="assets/slides/slide-29.png" alt="Sobrepoblación y limitación de recursos según Malthus"><figcaption>Malthus y rendimientos decrecientes</figcaption></figure>
-        <figure><img src="assets/slides/slide-33.png" alt="Rendimientos crecientes y productividad agrícola"><figcaption>Rendimientos crecientes y tecnología</figcaption></figure>
-      </div>
-    </section>
-
-    <!-- Tradicional vs actual + positiva normativa -->
-    <section class="section alt">
-      <div class="wrapper grid-2">
-        <article class="panel">
-          <h2>Definición tradicional vs. actual</h2>
-          <p>La definición clásica se tensiona cuando se incorporan bienes y servicios renovables y agotables, necesidades presentes y futuras, y recursos escasos frente a demandas crecientes.</p>
-          <img src="assets/slides/slide-34.png" alt="Economía definición tradicional versus actual">
-        </article>
-        <article class="panel">
-          <h2>Separar causa y efecto</h2>
-          <p>La economía positiva describe lo que es y se apoya en datos. La economía normativa expresa lo que se considera deseable según valores y creencias.</p>
-          <img src="assets/slides/slide-35.png" alt="Economía positiva y economía normativa">
-        </article>
-      </div>
-    </section>
-
-    <!-- PPT completo -->
-    <section class="section wrapper" id="ppt">
-      <div class="section-title centered">
-        <p class="eyebrow">Material original preservado</p>
-        <h2>Galería completa de diapositivas</h2>
-        <p>Se incorpora la presentación original como respaldo visual para conservar gráficos, noticias, capturas y composición de cada diapositiva.</p>
-      </div>
-      <div class="slide-gallery" id="slideGallery"></div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrapper footer-grid">
-      <div><strong>Economía Política · FCA · UNNE</strong><p>Clase inicial · 2026</p></div>
-      <a href="#inicio">Volver arriba ↑</a>
-    </div>
-  </footer>
-  <script src="script.js"></script>
+    <!-- Scripts de Reveal.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            transition: 'slide'
+        });
+    </script>
 </body>
 </html>
