@@ -1,88 +1,251 @@
+/* --- Estilos Generales Reajustados --- */
 :root {
-    --r-main-font: 'Google Sans', Arial, sans-serif;
-    --r-heading-font: 'Google Sans', Arial, sans-serif;
+    --r-main-font: Arial, sans-serif;
+    --r-heading-font: Arial, sans-serif;
     --r-heading-color: #1a365d;
-    --r-link-color: #3182ce;
 }
 
-/* --- Tipografía General Reveal.js --- */
-.reveal h1, .reveal h2, .reveal h3, .reveal h4 { 
-    font-weight: 700; 
-    text-transform: none; 
-}
-.reveal p, .reveal li { 
-    color: #2d3748; 
-    text-align: left; 
+/* Forzar alineación izquierda nativa de las diapositivas académicas */
+.reveal p, .reveal li, .reveal td {
+    text-align: left;
+    line-height: 1.4;
 }
 
-/* --- Clases Específicas de Diapositivas --- */
-.main-title { font-size: 2.2em; color: #1a365d; text-align: center; }
-.subtitle { text-align: center; font-weight: bold; color: #4a5568; }
-.divider { border: 1px solid #cbd5e0; margin: 20px 0; }
-.professor { text-align: center; font-size: 0.9em; }
-.date-info { text-align: center; font-size: 0.7em; color: #718096; }
+/* Modificadores de Texto */
+.text-center { text-align: center !important; }
+.text-red { color: #e53e3e !important; }
+.text-blue { color: #2b6cb0 !important; }
+.text-green { color: #38a169 !important; }
+.text-orange { color: #dd6b20 !important; }
+.text-underline { text-decoration: underline; }
+.font-small { font-size: 0.65em !important; }
+.font-medium { font-size: 0.8em !important; }
+.font-large { font-size: 1.2em !important; }
+.font-xl { font-size: 1.8em !important; }
+.font-xxl { font-size: 2.5em !important; }
+.light-text { color: white !important; }
+.pad-5 { padding: 5px; }
+.pad-10 { padding: 10px; }
 
-.professors-list { font-size: 0.8em; line-height: 1.6; }
-.degree { color: #718096; font-size: 0.9em; }
-.contact-box { background: #edf2f7; padding: 15px; border-radius: 6px; margin-top: 30px; font-size: 0.7em; text-align: center; }
+/* Separadores y Margen */
+.space-top { margin-top: 25px !important; }
+.divider { border: 1px solid #cbd5e0; margin: 15px 0; }
 
-/* --- Tablas --- */
-.table-title { font-size: 1.1em; }
-.curriculum-table { font-size: 0.45em; width: 100%; border-collapse: collapse; margin-top: 10px; }
-.curriculum-table th { background-color: #1a365d; color: white; font-weight: bold; text-align: center; padding: 6px; }
-.curriculum-table td { border: 1px solid #e2e8f0; padding: 5px; text-align: left; }
-.curriculum-table tr:nth-child(even) { background-color: #f7fafc; }
-.highlight-subject { background: #feebc8; font-weight: bold; padding: 2px 4px; border-radius: 3px; }
+/* Estructura Multicolumna */
+.two-columns { display: flex; align-items: center; justify-content: space-between; gap: 20px; width: 100%; }
+.three-columns { display: flex; align-items: stretch; justify-content: space-between; gap: 15px; width: 100%; }
+.col { flex: 1; }
+.col-3 { width: 32%; }
+.center { display: flex; justify-content: center; align-items: center; }
+.center-center { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; }
 
-/* --- Flexbox y Estructuras Modulares --- */
-.flex-container { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.flex-child { flex: 1; }
-.space-top { margin-top: 40px; }
-.no-gap { gap: 10px; }
-.center-content { text-align: center; }
+/* --- Diapositiva Portada y Listas --- */
+.header-box { border: 3px solid #1a365d; padding: 30px; background: #fff; border-radius: 4px; text-align: center; }
+.header-box h1 { font-size: 2.2em; margin-bottom: 10px; }
+.date-text { text-align: center !important; color: #4a5568; margin-top: 15px; }
+.slide-tag { background: #1a365d; color: white; display: inline-block; padding: 5px 20px; font-size: 0.8em; margin-top: 15px; }
+.main-list { font-size: 0.75em; margin-top: 20px; }
+.mail-box { background: #edf2f7; padding: 10px; border-radius: 4px; font-size: 0.65em; margin-top: 20px; text-align: center; }
 
-/* --- Tarjetas de Condiciones --- */
-.condition-box { padding: 20px; border-radius: 8px; text-align: center; }
-.condition-box h3 { font-size: 1em; margin: 0; }
-.condition-box p { font-size: 0.65em; margin-top: 10px; text-align: center; }
-.promotional { background: #c6f6d5; }
-.regular { background: #feebc8; }
-.free { background: #fed7d7; }
+/* --- Tablas Académicas Completas --- */
+.table-sub { font-size: 0.55em; font-weight: bold; color: #4a5568; text-align: center !important; }
+.table-container { width: 100%; overflow-x: auto; margin-top: 10px; }
+.scrollable-table { max-height: 400px; overflow-y: auto; }
+table { font-size: 0.4em; width: 100%; border-collapse: collapse; }
+th { background-color: #1a365d; color: white; font-weight: bold; padding: 6px; text-align: center !important; border: 1px solid #cbd5e0; }
+td { border: 1px solid #cbd5e0; padding: 5px; vertical-align: top; }
+tr:nth-child(even) { background-color: #f7fafc; }
+.subject-focus { background: #feebc8; font-weight: bold; padding: 2px; border: 1px solid #dd6b20; }
 
-/* --- Cronograma --- */
-.section-sub { font-size: 0.8em; }
-.schedule-list { font-size: 0.75em; }
-.badge { background: #e53e3e; color: white; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
-.async-text { font-size: 0.7em; }
+/* --- Diapositiva 4 Conceptos e Iconos --- */
+.big-concept { font-size: 1.1em !important; font-weight: bold; color: #1a365d; text-align: center !important; border: 2px solid #ed8936; padding: 15px; background: #fffaf0; }
+.icons-row { display: flex; justify-content: center; gap: 30px; font-size: 1.5em; margin-top: 15px; }
 
-/* --- Elementos Oscuros (Meme/Objetivos) --- */
-.light-text { color: white; }
-.light-sub { color: #e2e8f0; text-align: center; font-size: 1.1em; margin-top: 20px; }
-.light-footer { color: #a0aec0; font-size: 0.55em; text-align: center; margin-top: 15px; }
-.svg-meme { width: 280px; height: 200px; background: #2d3748; padding: 20px; border-radius: 8px; }
+/* --- Botella de Agua --- */
+.price-badge-row { display: flex; justify-content: center; gap: 15px; margin-top: 15px; }
+.p-badge { background: #3182ce; color: white; font-weight: bold; padding: 5px 12px; border-radius: 4px; font-size: 0.8em; }
+.mock-tweet-img { width: 220px; height: 160px; background: #e2e8f0; border: 2px solid #cbd5e0; display: flex; align-items: center; justify-content: center; border-radius: 6px; }
+.water-bottle-vector { font-weight: bold; color: #2b6cb0; font-size: 1.1em; }
 
-/* --- Gráficos e Iconos SVG --- */
-.vector-icon { width: 120px; height: 120px; margin: 0 auto; display: block; }
-.concept-card { background: #edf2f7; padding: 30px; border-radius: 8px; }
-.concept-text { font-size: 1.1em; font-weight: bold; margin-top: 10px; line-height: 1.4; }
+.box-title { color: #2b6cb0; margin: 0 0 10px 0; }
+.question-list { font-size: 0.75em; }
+.tweet-box { background: white; border: 1px solid #e1e8ed; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+.tweet-header { display: flex; justify-content: space-between; align-items: center; font-size: 0.55em; margin-bottom: 10px; border-bottom: 1px solid #f5f8fa; padding-bottom: 5px; }
+.arrow-back { font-weight: bold; color: #657786; }
+.tweet-content { font-size: 0.6em; color: #14171a; }
+.tweet-footer { font-size: 0.5em; color: #657786; margin-top: 10px; border-top: 1px solid #f5f8fa; padding-top: 5px; }
 
-.section-description { font-size: 0.7em; color:#4a5568; }
-.price-list { list-style-type: none; padding-left: 0; font-size: 0.65em; }
-.price-list li { margin-bottom: 8px; }
-.case-conclusion { margin-top: 20px; background: #ebf8ff; padding: 10px; border-radius: 4px; font-weight: 500; font-size: 0.65em; }
-.bottle-svg { width: 130px; height: 180px; }
+/* --- Precios Cuidados --- */
+.account-box { width: 100%; }
+.quote-text { border-left: 3px solid #e53e3e; padding-left: 10px; margin-top: 10px; font-style: italic; font-weight: bold; }
+.tweet-link { font-size: 0.45em; margin-top: 10px; word-break: break-all; }
+.gondola-graphic { width: 240px; height: 200px; background: #edf2f7; border: 2px dashed #a0aec0; position: relative; border-radius: 4px; }
+.empty-shelf { text-align: center; font-size: 0.7em; font-weight: bold; color: #a0aec0; margin-top: 40px; border-bottom: 4px solid #cbd5e0; padding-bottom: 10px; }
+.price-tag-cuidados { background: #fff; border: 2px solid #38a169; position: absolute; bottom: 20px; left: 20px; right: 20px; padding: 8px; display: flex; flex-direction: column; align-items: center; }
+.tag-title { font-size: 0.4em; font-weight: bold; color: #718096; }
+.price-value { font-size: 1.2em; font-weight: bold; color: #e53e3e; }
+.promo-banner { background: #38a169; color: white; font-size: 0.4em; padding: 2px 6px; font-weight: bold; border-radius: 2px; }
 
-.definitions-block { font-size: 0.75em; line-height: 1.6; }
+/* --- Competencia de Huevos --- */
+.border-right-dash { border-right: 2px dashed #cbd5e0; }
+.egg-seller-box { background: #f7fafc; border: 1px solid #e2e8f0; padding: 20px; margin-top: 15px; border-radius: 6px; text-align: center; }
+.seller-figure { font-size: 0.8em; font-weight: bold; margin-bottom: 10px; }
+.price-sign { font-size: 1.8em; font-weight: bold; color: #4a5568; margin-top: 10px; }
+.tweet-source-footer { text-align: center; font-size: 0.45em; margin-top: 20px; }
 
-.explanation-text { font-size: 0.65em; }
-.alert-box { background: #fff5f5; padding: 10px; border-radius: 5px; margin-top: 15px; font-weight: bold; }
-.chart-svg { width: 250px; height: 200px; background: #f7fafc; padding: 10px; border-radius: 5px; }
+/* --- Precio, Valor, Costo --- */
+.card-pvc { border-radius: 6px; background: white; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.card-pvc-header { font-weight: bold; text-align: center !important; color: white; padding: 10px; font-size: 0.8em; border-radius: 4px 4px 0 0; }
+.card-pvc-body { padding: 15px; font-size: 0.6em; color: #2d3748; }
+.border-blue { border: 2px solid #2b6cb0; }
+.border-red { border: 2px solid #e53e3e; }
+.border-grey { border: 2px solid #718096; }
+.bg-blue { background-color: #2b6cb0; }
+.bg-red { background-color: #e53e3e; }
+.bg-grey { background-color: #718096; }
 
-.category-box { background:#f7fafc; padding:15px; border-radius:6px; font-size:0.65em; }
-.category-box h4 { color:#2c5282; margin: 0 0 8px 0; }
-.book-definition { background: #e2e8f0; padding: 12px; margin-top: 20px; font-size: 0.65em; border-radius: 6px; font-weight: 500; }
+/* --- Hablemos sin Saber --- */
+.text-alert-yellow { color: #ecc94b !important; font-weight: bold; text-align: center !important; }
+.tv-frame { background: #2d3748; border: 8px solid #1a202c; width: 400px; height: 240px; border-radius: 12px; padding: 10px; margin: 0 auto; box-shadow: 0 10px 15px rgba(0,0,0,0.3); }
+.tv-screen { background: #9b2c2c; height: 100%; border-radius: 6px; position: relative; padding: 15px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; }
+.tv-logo { font-size: 0.4em; color: #feb2b2; font-family: monospace; }
+.tv-content-box { text-align: center; background: rgba(0,0,0,0.4); padding: 10px; border-radius: 4px; }
+.tv-show-title { text-align: center !important; font-size: 0.9em !important; font-weight: bold; color: #fff; margin: 0; }
+.tv-scroll-text { text-align: center !important; font-size: 0.65em !important; color: #fbd38d; margin: 5px 0 0 0; font-weight: bold; }
+.tv-footer-banner { position: absolute; bottom: 10px; left: 15px; background: #e53e3e; color: white; font-size: 0.5em; padding: 2px 8px; font-weight: bold; }
 
-.debate-card { background:#edf2f7; padding:12px; border-radius:6px; font-size:0.65em; }
-.debate-card h4 { color:#2c5282; margin: 0 0 5px 0; }
-.debate-card p { font-size:0.95em; }
-.tech-conclusion { background:#e6fffa; text-align:center; font-size:0.65em; font-weight:bold; padding:10px; border-radius:4px; margin-top:20px; color:#234e52; }
+/* --- Cronograma Bloques --- */
+.schedule-block { border-left: 4px solid; padding-left: 15px; }
+.block-title-green { color: #2f855a; margin: 0; }
+.block-title-blue { color: #2b6cb0; margin: 0; }
+.block-text { font-size: 0.75em; margin-top: 5px; }
+.schedule-items { font-size: 0.7em; margin-top: 10px; }
+.badge-danger { background: #e53e3e; color: white; padding: 2px 6px; font-size: 0.8em; border-radius: 3px; font-weight: bold; }
+
+.dates-list { font-size: 0.7em; }
+.alert-info-box { background: #ebf8ff; border: 1px solid #bee3f8; color: #2b6cb0; padding: 10px; font-size: 0.65em; text-align: center; border-radius: 4px; }
+
+/* Llave de Fechas Extrañas */
+.bracket-container { display: flex; align-items: center; justify-content: flex-end; }
+.bracket-list { font-size: 0.6em; line-height: 1.6; text-align: right; }
+.right-bracket { font-size: 4em; font-family: Courier, monospace; line-height: 1; margin-left: 10px; color: #4a5568; }
+.vemos-stamp { background: #ecc94b; color: #744210; font-weight: bold; font-size: 1.5em; padding: 10px 30px; border-radius: 4px; transform: rotate(-5deg); border: 2px dashed #744210; }
+
+/* Bloques de Fases */
+.phase-box { background: #f7fafc; border: 1px solid #cbd5e0; border-radius: 6px; overflow: hidden; }
+.phase-header { color: white; font-weight: bold; font-size: 0.7em; text-align: center; padding: 8px; }
+.bg-darkblue { background-color: #1a365d; }
+.phase-body { padding: 15px; font-size: 0.6em; }
+.phase-unit { font-weight: bold; color: #2b6cb0; font-size: 1.1em !important; }
+.phase-concept { font-weight: bold; margin-top: 5px; }
+.phase-date { color: #718096; margin-top: 2px; font-style: italic; }
+.phase-details { margin-top: 10px; padding-left: 15px; }
+
+/* Mockup Navegador */
+.browser-mockup { border: 1px solid #cbd5e0; border-radius: 6px; overflow: hidden; background: #fff; width: 100%; }
+.browser-bar { background: #edf2f7; padding: 6px; border-bottom: 1px solid #cbd5e0; display: flex; align-items: center; }
+.url-text { background: white; border: 1px solid #e2e8f0; font-size: 0.45em; padding: 2px 10px; border-radius: 4px; width: 60%; display: block; font-family: monospace; }
+.browser-content { padding: 15px; font-size: 0.5em; }
+.mock-announcements { border-bottom: 1px solid #edf2f7; padding-bottom: 10px; }
+.mock-ann-item { margin-bottom: 5px; color: #4a5568; }
+.mock-footer-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; justify-content: center; }
+.mock-btn { background: #edf2f7; padding: 4px 8px; font-size: 0.9em; border-radius: 3px; color: #4a5568; border: 1px solid #cbd5e0; }
+.highlighted-btn-orange { background: #ed8936 !important; color: white !important; font-weight: bold; border-color: #dd6b20 !important; }
+
+/* Bloques de Condición */
+.three-blocks-row { display: flex; justify-content: space-between; gap: 15px; width: 100%; }
+.status-block { flex: 1; padding: 25px; text-align: center; font-weight: bold; font-size: 1em; border-radius: 6px; border: 2px solid rgba(0,0,0,0.1); }
+.bg-lightgreen { background-color: #c6f6d5; color: #22543d; }
+.bg-lightyellow { background-color: #feebc8; color: #744210; }
+.bg-lightred { background-color: #fed7d7; color: #742a2a; }
+
+.rules-table-container { width: 100%; }
+.rules-table { font-size: 0.55em; }
+.rules-table td { vertical-align: middle; padding: 12px; }
+.td-title { width: 25%; text-align: center !important; }
+
+/* Histógramas Simulados */
+.chart-label { font-size: 0.65em !important; text-align: center !important; }
+.mock-chart-bars { height: 150px; display: flex; align-items: flex-end; justify-content: center; gap: 4px; border-bottom: 2px solid #4a5568; padding: 0 10px; margin-top: 10px; }
+.mock-chart-bars .bar { width: 16px; background-color: #3182ce; border-radius: 2px 2px 0 0; }
+.chart-axis-x { text-align: center !important; font-size: 0.5em !important; font-family: monospace; word-spacing: 8px; margin-top: 5px; color: #718096; }
+.consensus-box { background: rgba(255,255,255,0.2); border: 2px dashed white; padding: 15px; border-radius: 6px; font-size: 0.65em; font-weight: bold; text-align: center; margin-top: 25px; }
+
+/* Gráfico Circular de Bibliografía */
+.circle-chart-container { width: 260px; height: 260px; border-radius: 50%; border: 4px solid #1a365d; position: relative; overflow: hidden; display: flex; flex-wrap: wrap; background: #fff; }
+.circle-chart-container::before { content: ""; position: absolute; top: 0; left: 50%; width: 4px; height: 100%; background: #1a365d; z-index: 2; }
+.circle-chart-container::after { content: ""; position: absolute; top: 50%; left: 0; width: 100%; height: 4px; background: #1a365d; z-index: 2; }
+.sector { position: absolute; display: flex; align-items: center; justify-content: center; font-size: 0.6em; font-weight: bold; text-align: center; padding: 10px; box-sizing: border-box; }
+.s1 { top: 0; left: 0; width: 50%; height: 100%; background: #ebf8ff; z-index: 1; }
+.s2 { top: 0; right: 0; width: 50%; height: 50%; background: #feebc8; }
+.s3 { bottom: 0; right: 0; width: 50%; height: 50%; background: #e6fffa; }
+.sector span { transform: rotate(0deg); color: #14171a; text-align: center; }
+
+/* Matriz Bibliografía Medios */
+.link-header { text-align: center !important; font-size: 0.6em !important; }
+.media-grid-container { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; }
+.grid-app-mock { padding: 15px; border-radius: 6px; border: 1px solid #cbd5e0; font-size: 0.6em; font-weight: bold; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); background: white; }
+.bg-black { background: #1a202c !important; }
+
+/* Tabla IA */
+.ia-table-grid { border: 2px solid #cbd5e0; font-size: 0.5em; background: white; border-radius: 6px; overflow: hidden; width: 100%; }
+.ia-row { display: flex; padding: 10px; border-bottom: 1px solid #edf2f7; align-items: center; gap: 10px; }
+.ia-row:last-child { border-bottom: none; }
+.ia-cat { font-weight: bold; color: #2b6cb0; width: 25%; border-right: 1px solid #edf2f7; padding-right: 5px; }
+.ia-row span:not(.ia-cat) { background: #edf2f7; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+
+/* Defs Economía y Agronomía */
+.flow-row { display: flex; align-items: center; justify-content: space-between; width: 100%; background: #f7fafc; padding: 10px; border-radius: 4px; border-left: 5px solid #4a5568; }
+.flow-block-left { font-weight: bold; color: white; background: #4a5568; padding: 8px 15px; border-radius: 3px; font-size: 0.7em; width: 20%; text-align: center; }
+.arrow-right { font-size: 1.2em; color: #a0aec0; }
+.flow-block-right { width: 70%; font-size: 0.65em; padding: 5px; background: white; border-radius: 3px; }
+
+.concept-split-box { background: white; border: 1px solid #cbd5e0; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); height: 100%; }
+.clean-list { list-style-type: none; padding: 0 15px; font-size: 0.6em; margin-top: 10px; }
+.clean-list li { margin-bottom: 8px; border-bottom: 1px dashed #edf2f7; padding-bottom: 4px; }
+
+.text-book-box { background: #fffaf0; border: 1px dashed #dd6b20; padding: 20px; border-radius: 6px; font-size: 0.65em; }
+.indent-text { padding-left: 20px; margin-top: 5px; }
+
+/* Malthus y Grafico Cropos */
+.portrait-placeholder { width: 180px; height: 220px; background: #edf2f7; border: 1px dashed #a0aec0; display: flex; align-items: center; justify-content: center; font-size: 0.45em; text-align: center; color: #718096; padding: 10px; border-radius: 4px; }
+.comparison-card-blue { background: #ebf8ff; border: 1px solid #bee3f8; border-radius: 6px; padding: 15px; }
+.comparison-card-blue h3 { font-size: 0.9em !important; color: #2b6cb0; margin: 0; }
+.quote-italic { font-style: italic; font-size: 0.6em; margin-top: 8px; font-weight: bold; color: #2c5282; }
+.card-desc { font-size: 0.55em; margin-top: 8px; color: #4a5568; }
+.footer-highlight-teal { background: #e6fffa; border: 1px solid #b2f5ea; color: #234e52; text-align: center; font-weight: bold; font-size: 0.7em; padding: 10px; border-radius: 4px; }
+
+.malthus-graph-box, .chart-crops-mock { background: white; border: 1px solid #e2e8f0; padding: 10px; border-radius: 4px; width: 100%; }
+.chart-caption-text { font-size: 0.45em !important; text-align: center !important; font-weight: bold; margin-top: 5px; color: #4a5568; }
+.comparison-foot-box { background: #f7fafc; padding: 8px; border-radius: 4px; font-size: 0.9em; border-top: 2px solid #cbd5e0; }
+
+.matrix-cross { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; }
+.m-box { padding: 15px; border-radius: 4px; text-align: center; font-size: 0.65em; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+.cross-lines-visual { text-align: center !important; font-size: 0.6em !important; font-weight: bold; color: #e53e3e; margin-top: 15px; background: #fff5f5; padding: 5px; border-radius: 4px; }
+
+.sub-box-ce { padding: 15px; border-radius: 6px; height: 100%; }
+.sub-box-ce h4 { margin: 0 0 10px 0; font-size: 0.8em; text-align: center; color: #2d3748; }
+.sub-box-ce font-medium { display: block; text-align: center; margin-bottom: 8px; }
+.sub-box-ce ul { font-size: 0.55em; padding-left: 15px; }
+.sub-box-ce li { margin-bottom: 5px; }
+
+.table-example-box { border: 1px solid #cbd5e0; border-radius: 4px; background: white; overflow: hidden; }
+.example-items { font-size: 0.55em; padding: 10px 15px; }
+.example-items li { margin-bottom: 8px; }
+
+.examples-card-split { padding: 15px; border-radius: 6px; background: #fff; height: 100%; }
+.examples-card-split h4 { margin: 0 0 10px 0; font-size: 0.8em; text-align: center; }
+.clean-list-dash { list-style-type: square; padding-left: 15px; font-size: 0.6em; }
+.clean-list-dash li { margin-bottom: 8px; }
+
+/* Mockup Recortes de Noticias del Término */
+.news-mockup-container { background: #fff; border: 1px solid #cbd5e0; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); padding: 20px; width: 100%; box-sizing: border-box; }
+.border-top-red { border-top: 4px solid #e53e3e !important; }
+.news-header { font-size: 0.5em; font-weight: bold; color: #718096; border-bottom: 1px solid #edf2f7; padding-bottom: 5px; margin-bottom: 10px; }
+.news-header-red { font-size: 0.8em; font-weight: bold; color: #9b2c2c; margin-bottom: 10px; line-height: 1.3; }
+.news-body { font-size: 0.6em; }
+.news-title { font-size: 1.2em; font-weight: bold; line-height: 1.3; color: #1a202c; margin-bottom: 10px; }
+.news-text { color: #4a5568; line-height: 1.5; text-align: justify !important; }
+.news-highlight-banner { background: #f7fafc; padding: 10px; border-left: 4px solid #e53e3e; font-size: 1.1em; font-weight: 500; }
+.news-date-footer { font-size: 0.8em; color: #a0aec0; text-align: right !important; margin-top: 15px; }
+.table-source-footer { font-size: 0.45em; text-align: right !important; margin-top: 5px; }
