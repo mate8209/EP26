@@ -1,8 +1,27 @@
-# 📊 Presentación Completa: Economía Política (FCA - UNNE)
+# Economía Política - Clase inicial
 
-Este repositorio contiene la transposición exacta de la **Clase Inicial de Economía Política** para la Facultad de Ciencias Agrarias (UNNE), preservando la totalidad de los contenidos teóricos, cronogramas vigentes, casos prácticos y simulaciones visuales de las interacciones en redes sociales de la cátedra.
+Presentación web interactiva lista para GitHub Pages.
 
-## 🛠️ Estructura del Código
-* **`index.html`**: Estructura semántica de las 37 diapositivas originales con mockups visuales nativos para debates (Meme Sin Codificar, Precios Cuidados, Tweets de la botella de agua).
-* **`styles.css`**: Estilos responsivos académicos y esquemas de colores adaptados a los bloques de economía positiva y normativa.
-* **`script.js`**: Controlador de inicialización del motor web de Reveal.js.
+## Estructura
+
+```text
+index.html
+assets/styles.css
+assets/script.js
+assets/slides/page-01.png ... page-38.png
+images/
+```
+
+## Publicación en GitHub Pages
+
+1. Crear o abrir el repositorio.
+2. Subir `index.html`, `assets/` e `images/` en la raíz.
+3. Ir a `Settings > Pages`.
+4. Seleccionar `Deploy from a branch`, rama `main`, carpeta `/root`.
+5. Esperar la publicación.
+
+## Notas de edición
+
+- Las diapositivas de texto fueron reconstruidas en HTML para mejorar claridad y edición.
+- Las infografías, capturas y gráficos se mantienen como imágenes para preservar diseño y fuente visual.
+- Los vínculos externos figuran como hipervínculos limpios bajo el texto `Fuente original`.
