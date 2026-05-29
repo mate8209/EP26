@@ -1,790 +1,209 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Economía Política - FCA UNNE</title>
-    <!-- Reveal.js Estilos base y tema de la CDN -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Economía Política - Clase Inicial (FCA-UNNE)</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/league.min.css">
+
+    <style>
+        .reveal section img {
+            background: none;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            max-height: 480px;
+            object-fit: contain;
+        }
+        .reveal h2, .reveal h3 {
+            color: #eeeeee;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .slide-flex {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+        }
+        .catedra-info {
+            font-size: 0.7em;
+            text-align: left;
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-
     <div class="reveal">
         <div class="slides">
 
-            <!-- DIAPOSITIVA 1: PORTADA -->
-            <section data-background-color="#f7fafc">
-                <div class="header-box">
-                    <h1>ECONOMÍA POLÍTICA</h1>
-                    <p>Dpto de Economía</p>
-                    <p>FCA - UNNE</p>
-                    <p><strong>LIC. JUAN PABLO YBARRA</strong></p>
-                    <p class="date-text">Martes 2 de Jun 2026</p>
-                    <h2 class="slide-tag">CLASE INICIAL</h2>
-                </div>
+            <section data-background-gradient="linear-gradient(to bottom, #1e522f, #091f11)">
+                <h2>ECONOMÍA POLÍTICA</h2>
+                <p style="color: #a2c4ab; font-weight: bold;">Dpto de Economía<br>FCA - UNNE</p>
+                <hr style="width: 50%; border-color: #a2c4ab;">
+                <p><small>LIC. JUAN PABLO YBARRA</small></p>
+                <p style="font-size: 0.6em; opacity: 0.7;">Martes 2 de Jun 2026<br><strong>CLASE INICIAL</strong></p>
             </section>
 
-            <!-- DIAPOSITIVA 2: PROFESORES -->
-            <section>
-                <h3>ECONOMÍA POLITICA: Profesores</h3>
-                <ul class="main-list">
-                    <li>Juan Pablo Ybarra (Lic. en Eco Mgs. en Finanzas)</li>
-                    <li>Jorge Estoup (Lic. en Eco Mgs. en Economía y Desarrollo)</li>
-                    <li>Thea Belaustegui (Lic. en Adm - Mgs. en Empresas de Fliar)</li>
-                    <li>Mariano Tractha (Ing. Agr. - Mgs en Agronegocios y Alimentos – Mgs of Science)</li>
-                    <li>Ricardo Rey Leyes (ayudante alumno)</li>
-                </ul>
-                <div class="mail-box">
-                    <strong>MAIL DE LA CATEDRA:</strong> economiapoliticacsagr@gmail.com
-                </div>
-            </section>
-
-            <!-- DIAPOSITIVA 3: PLAN DE ESTUDIO COMPLETO -->
-            <section>
-                <h4>PLAN DE ESTUDIO: Asignaturas de Economía</h4>
-                <p class="table-sub">DISTRIBUCIÓN Y CARGA HORARIA DE LAS MATERIAS</p>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>AÑO</th>
-                                <th>1º TRIMESTRE (Hs)</th>
-                                <th>2º TRIMESTRE (Hs)</th>
-                                <th>3º TRIMESTRE (Hs)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>1º</strong></td>
-                                <td>MATEMATICA I (96)<br>QUÍMICA GRAL. E INORGANICA (96)</td>
-                                <td>MATEMATICA II (96)<br>MORFOLOGÍA DE LAS PLANTAS VASCULARES (96)<br>GENÉTICA (60)</td>
-                                <td>FÍSICA I (96)<br>AGROCLIMATOLOGÍA (88)<br>INTRODUCCIÓN A LAS CIENCIAS AGRARIAS (36)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>2º</strong></td>
-                                <td>FÍSICA II (60)<br>QUÍMICA ORGANICA Y BIOLOGICA (96)</td>
-                                <td>ΑΝΑΤΟΜΙA Y FISIOLOGIA ANIMAL (96)<br>CÁLCULO ESTADÍSTICO Y BIOMETRÍA (96)</td>
-                                <td>FISIOLOGIA VEGETAL (96)<br>EDAFOLOGIA (96)<br>BOTÁNICA SISTEMÁTICA y FITOG. (84)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>3º</strong></td>
-                                <td>MICROBIOLOGÍA AGRÍCOLA (84)<br>ZOOLOGÍA AGRÍCOLA (96)</td>
-                                <td>FITOPATOLOGIA (96)<br><span class="subject-focus">ECONOMIA POLITICA (72)</span><br>MECANIZACIÓN AGRÍCOLA (96)</td>
-                                <td>NUTRICIÓN ANIMAL (60)<br>QUIMICA ANALITICA Y AGRÍCOLA (96)<br>HIDROLOGÍA AGRÍCOLA (96)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>4º</strong></td>
-                                <td>ECOFISIOLOGIA (seminario) (30)<br>TERAPÉUTICA VEGETAL (96)<br>FORRAJICULTURA (96)</td>
-                                <td>SOCIOLOGIA Y EXTENSION RURAL (36)<br>ECONOMÍA AGRARIA (48)<br>MANEJO Y CONSERVACION DE SUELOS (84)</td>
-                                <td>RECURSOS NATURALES (Seminario de integración) (30)<br>FRUTICULTURA (48)<br>SILVICULTURA (72)<br>CULTIVOS I (36)<br>CULTIVOS II (48)<br>ZOOTECNIA (88)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>5º</strong></td>
-                                <td>CULTIVOS III (48)<br>HORTICULTURA (48)<br>CULTIVOS I (36)<br>ADMINISTRACIÓN Y LEGISLACIÓN AGRARIA (60)</td>
-                                <td>MATERIAS OPTATIVAS * (300)<br>OPTATIVA: PRODUCCIÓN VEGETAL (120)<br>OPTATIVA: PRODUCCIÓN ANIMAL (60)<br>OPTATIVA: OTRAS AREAS (120)</td>
-                                <td>PROYECTO Y PLANIFICACION AGROPECUARIA (30)<br><small>Seminario de integración.</small></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <!-- DIAPOSITIVA 4: DISPARADOR -->
-            <section>
-                <h2>¿QUÉ ES ECONOMÍA PARA USTEDES?</h2>
-                <div class="two-columns">
-                    <div class="col center">
-                        <div class="svg-placeholder yellow-globe">
-                            <!-- Gráfico Vectorial que representa el Icono de la Mano con Moneda y el Mundo -->
-                            <svg viewBox="0 0 100 100" width="160">
-                                <circle cx="50" cy="35" r="25" fill="none" stroke="#1a365d" stroke-width="4"/>
-                                <path d="M35 35 Q50 20 65 35 M32 45 Q50 60 68 45 M50 10 L50 60" stroke="#1a365d" stroke-width="2" fill="none"/>
-                                <path d="M 15 80 C 40 80, 45 70, 60 70 C 75 70, 85 85, 90 85" stroke="#ed8936" stroke-width="6" fill="none"/>
-                                <circle cx="60" cy="45" r="12" fill="#ed8936"/>
-                                <text x="60" y="50" fill="white" font-size="14" font-weight="bold" text-anchor="middle">$</text>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="col text-center-box">
-                        <p class="big-concept">LA ASIGNACIÓN DE RECURSOS PARA SATISFACER NECESIDADES HUMANAS</p>
-                        <div class="icons-row">
-                            <span>🏠</span><span>💪</span><span>✈️</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- DIAPOSITIVA 5: BOTELLA DE AGUA PARTE 1 -->
-            <section>
-                <h3>La economía detrás de la botella de agua</h3>
-                <p class="slide-text">Esta botella cuesta $548 en el supermercado, $799 en el gimnasio, $1.097 en un bar y $1.980 en un avión.</p>
-                <p class="slide-text font-medium">Misma botella, misma agua, solo cambia su precio dependiendo del lugar.</p>
-                <div class="price-badge-row">
-                    <span class="p-badge">$548</span>
-                    <span class="p-badge">$799</span>
-                    <span class="p-badge">$1.097</span>
-                    <span class="p-badge">$1.980</span>
-                </div>
-                <div class="center space-top">
-                    <div class="mock-tweet-img">
-                        <div class="water-bottle-vector">💧 Villavicencio</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- DIAPOSITIVA 6: BOTELLA DE AGUA PARTE 2 (TWEET) -->
-            <section>
-                <div class="two-columns">
-                    <div class="col list-left">
-                        <h4 class="box-title">Preguntas</h4>
-                        <ul class="question-list">
-                            <li>¿Es el mismo producto?</li>
-                            <li>¿Tiene el mismo servicio?</li>
-                            <li>¿Tiene el mismo valor/precio costo?</li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <div class="tweet-box">
-                            <div class="tweet-header">
-                                <span class="arrow-back">←</span>
-                                <div class="tweet-user">
-                                    <strong>Carolina Albano</strong>
-                                    <span>@carodelchateau</span>
-                                </div>
-                                <span class="time-stamp">17:09</span>
-                            </div>
-                            <div class="tweet-content">
-                                <p>Esta botella vale $40 en el super, en el gym $100, en un bar $200, y en un avión hasta $500. Misma botella, mismo agua, sólo cambia su valor, dependiendo del sitio.</p>
-                            </div>
-                            <div class="tweet-footer">Twittea tu respuesta...</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- DIAPOSITIVA 7: PRECIOS CUIDADOS -->
-            <section>
-                <h3>El consumidor valora más de lo que dice el precio contable <span class="highlight-red">(excedente de demanda)</span></h3>
-                <div class="two-columns space-top">
-                    <div class="col tweet-col">
-                        <div class="tweet-box account-box">
-                            <div class="tweet-header">
-                                <strong>Una Monedita por favor</strong> <span>@economisto5 · 7 jun. 2019</span>
-                            </div>
-                            <div class="tweet-content">
-                                <p>Para los que dicen que los reguladores de precios no afectan el mercado acá les muestro como en la realidad se refleja ese excedente de Demanda que el mercado no puede cubrir.</p>
-                                <p class="quote-text">"Lo esencial es invisible a los ojos"</p>
-                            </div>
-                            <div class="tweet-link">
-                                <a href="https://twitter.com/economisto5/status/1137073207813578752" target="_blank">https://twitter.com/economisto5/status/1137073207813578752</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col center">
-                        <div class="gondola-graphic">
-                            <div class="empty-shelf">GÓNDOLA VACÍA</div>
-                            <div class="price-tag-cuidados">
-                                <span class="tag-title">PRODUCTO ESENCIAL</span>
-                                <span class="price-value">$26.70</span>
-                                <span class="promo-banner">Precios Cuidados</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- DIAPOSITIVA 8: COMPETENCIA VS MERCADO -->
-            <section>
-                <div class="two-columns">
-                    <div class="col center border-right-dash">
-                        <h3 class="title-responsive">Precio reactivo a la competencia</h3>
-                        <div class="egg-seller-box">
-                            <div class="seller-figure text-left-side">👩‍🌾 Vendedora 1</div>
-                            <div class="egg-carton font-large">🥚🥚🥚</div>
-                            <div class="price-sign">$150</div>
-                        </div>
-                    </div>
-                    <div class="col center">
-                        <h3 class="title-responsive">Precio reactivo a los mercados</h3>
-                        <div class="egg-seller-box">
-                            <div class="seller-figure text-right-side">👩‍🌾 Vendedora 2</div>
-                            <div class="egg-carton font-large">🥚🥚🥚</div>
-                            <div class="price-sign text-green">$140</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tweet-source-footer">
-                    <a href="https://twitter.com/i/status/1560351295097143299" target="_blank">https://twitter.com/i/status/1560351295097143299</a>
-                </div>
-            </section>
-
-            <!-- DIAPOSITIVA 9: DEFINICIONES TRIÁDICA -->
-            <section>
-                <h2>Diferencia entre Precio, Valor y Costo</h2>
-                <div class="three-columns space-top">
-                    <div class="col-3 card-pvc border-blue">
-                        <div class="card-pvc-header bg-blue">PRECIO</div>
-                        <div class="card-pvc-body">Es la cantidad de dinero que se debe pagar para comprar el bien</div>
-                    </div>
-                    <div class="col-3 card-pvc border-red">
-                        <div class="card-pvc-header bg-red">VALOR</div>
-                        <div class="card-pvc-body">Es la cantidad de dinero dispuesto a pagar en función a los beneficios que le otorga</div>
-                    </div>
-                    <div class="col-3 card-pvc border-grey">
-                        <div class="card-pvc-header bg-grey">COSTO</div>
-                        <div class="card-pvc-body">Es la cantidad de dinero que se utiliza para producir y comercializar un bien o servicios</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- DIAPOSITIVA 10: OBJETIVO SIN CODIFICAR -->
-            <section>
-                <h3>Objetivo "ideal" de la Cátedra</h3>
-                <h4 class="text-alert-yellow">Eliminar "las charlas de cafe"</h4>
-                <div class="center space-top">
-                    <div class="tv-frame">
-                        <div class="tv-screen">
-                            <div class="tv-logo">www.facebook.com/sincodificar</div>
-                            <div class="tv-content-box">
-                                <p class="tv-show-title">HABLEMOS SIN SABER</p>
-                                <p class="tv-scroll-text">¿PORQUE MESSI NO RINDE EN LA SELECCIÓN?</p>
-                            </div>
-                            <div class="tv-footer-banner">SINC</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- DIAPOSITIVA 11: CRONOGRAMA 1 -->
-            <section>
-                <h2>Reglas de Juegos</h2>
-                <h3>CRONOGRAMA: Días de Clases</h3>
-                <div class="schedule-block space-top">
-                    <h4 class="block-title-green">Sincronicas (siempre)</h4>
-                    <ul class="schedule-items">
-                        <li><strong>MARTES 16.30 hs – 17.45 hs</strong> (Primera Parte - Teoria)</li>
-                        <li><strong>MARTES 18.00 hs – 19.30 hs</strong> (Segunda Parte - Practico): <span class="badge-danger">TRAER CALCULADORA</span></li>
-                        <li><strong>VIERNES 18.00 hs – 19.30 hs</strong> (Teoria) – Mecanización (campito)</li>
+            <section id="profesores">
+                <h3>Profesores de la Cátedra</h3>
+                <div class="catedra-info">
+                    <ul>
+                        <li><strong>Juan Pablo Ybarra</strong> (Lic. en Eco - Mgs. en Finanzas)</li>
+                        <li><strong>Jorge Estoup</strong> (Lic. en Eco – Mgs. en Economía y Desarrollo)</li>
+                        <li><strong>Thea Belaustegui</strong> (Lic. en Adm - Mgs. en Empresas de Fam.)</li>
+                        <li><strong>Mariano Trachta</strong> (Ing. Agr. - Mgs en Agronegocios y Alimentos – Mgs of Science)</li>
+                        <li><strong>Ricardo Rey Leyes</strong> (Ayudante alumno)</li>
                     </ul>
-                </div>
-                <div class="schedule-block space-top">
-                    <h4 class="block-title-blue">Asincronicas</h4>
-                    <p class="block-text"><strong>Aula Virtual (automatriculación):</strong> PPT clases, Guia de TP, Resolución</p>
-                </div>
-            </section>
-
-            <!-- DIAPOSITIVA 12: FECHAS IMPORTANTES -->
-            <section>
-                <h3>CRONOGRAMA: Fechas Importantes</h3>
-                <ul class="dates-list space-top">
-                    <li><strong>UN FERIADO (previsto):</strong> viernes 10 de julio</li>
-                    <li><strong>Receso de Invierno:</strong> 13 al 24 de Julio (dos semanas)</li>
-                    <li><strong>DOS parciales:</strong> 1er Parcial 3/7 (Viernes) – 2do Parcial 1/9 (Martes)</li>
-                    <li><strong>Recuperatorio:</strong> 4/9 (Viernes)</li>
-                </ul>
-                <div class="alert-info-box space-top">
-                    Coordinado con Mecanización y Fitopatología
+                    <p style="text-align: center; margin-top: 20px; color: #64b5f6;">
+                        ✉️ economiapoliticacsagr@gmail.com
+                    </p>
                 </div>
             </section>
 
-            <!-- DIAPOSITIVA 13: FECHAS EXTRAÑAS / VEMOS -->
-            <section>
-                <h3>CRONOGRAMA: Fechas Importantes</h3>
-                <div class="two-columns space-top">
-                    <div class="col bracket-container">
-                        <div class="bracket-list">
-                            <p>Martes 16 de junio: 18 hs 22 hs (Argelia)</p>
-                            <p>Lunes 22 de junio: a las 14 hs (Austria)</p>
-                            <p>Sábado 27 de junio (Jordania)</p>
-                            <p>Martes 30 de junio 19 hs</p>
-                            <p>Martes 7 de julio 13 hs</p>
-                        </div>
-                        <div class="right-bracket">}</div>
-                    </div>
-                    <div class="col center-center">
-                        <div class="vemos-stamp">Vemos</div>
-                    </div>
+            <section id="plan-estudios">
+                <h3>Plan de Estudio: Asignaturas de Economía</h3>
+                <div class="slide-flex">
+                    <img src="imagenes/plan-de-estudios.jpg" alt="Plan de Estudios Ciencias Agrarias">
+                    <img src="imagenes/sistema-aulas.png" alt="Sistema de Aulas Virtuales UNNE" style="max-height: 350px;">
                 </div>
             </section>
 
-            <!-- DIAPOSITIVA 14: ESTRUCTURA CURSADA -->
-            <section>
-                <h3>CRONOGRAMA: Clases</h3>
-                <div class="two-columns space-top">
-                    <div class="col phase-box">
-                        <div class="phase-header bg-darkblue">PRIMERA PARTE</div>
-                        <div class="phase-body">
-                            <p class="phase-unit">UNIDAD 1 a 5</p>
-                            <p class="phase-concept">Ppio + Microeconomía</p>
-                            <p class="phase-date">Del 2 de junio al 7 de julio</p>
-                            <ul class="phase-details">
-                                <li>Clases de Teoría y Práctico</li>
-                                <li>2 charlas</li>
-                                <li>1 parcial</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col phase-box">
-                        <div class="phase-header bg-darkblue">SEGUNDA PARTE</div>
-                        <div class="phase-body">
-                            <p class="phase-unit">UNIDAD 6 a 10</p>
-                            <p class="phase-concept">Macroeconomía</p>
-                            <p class="phase-date">Del 28 de Julio al 4 de Sept</p>
-                            <ul class="phase-details">
-                                <li>Clases de Teoría y Práctico</li>
-                                <li>1 charla</li>
-                                <li>1 parcial</li>
-                                <li>1 Recuperatorio</li>
-                                <li>Viaje de mecanización</li>
-                            </ul>
-                        </div>
-                    </div>
+            <section id="medios-consumo">
+                <h3>Biografías y Consumo de Medios</h3>
+                <div class="slide-flex">
+                    <img src="imagenes/bio1.png" alt="Prensa Digital" style="max-width: 30%;">
+                    <img src="imagenes/bio2.png" alt="Canales de TV Abierta y Cable" style="max-width: 30%;">
+                    <img src="imagenes/bio3.png" alt="Redes Sociales" style="max-width: 30%;">
                 </div>
             </section>
 
-            <!-- DIAPOSITIVA 15: CAPTURA AULA VIRTUAL -->
-            <section>
-                <h3>CRONOGRAMA: Clases</h3>
-                <div class="browser-mockup space-top">
-                    <div class="browser-bar">
-                        <span class="url-text">agr.unne.edu.ar</span>
-                    </div>
-                    <div class="browser-content">
-                        <div class="mock-announcements">
-                            <p class="mock-ann-item">...desde el 18 de marzo hasta el 3 de abril para completar su inscripción...</p>
-                            <p class="mock-ann-item">Resolución N° 9/24 CS #UNNE - Jurados</p>
-                            <p class="mock-ann-item">Resolución N° 134/24 D - AGR#UNNE - Período de Inscripción 26/03/24 al 16/04/24</p>
-                        </div>
-                        <div class="mock-footer-grid">
-                            <div class="mock-btn">SIU Guaraní</div>
-                            <div class="mock-btn">SUDOCU</div>
-                            <div class="mock-btn">Anuncios</div>
-                            <div class="mock-btn highlighted-btn-orange">■ Sistema de Aulas</div>
-                            <div class="mock-btn">Compras y Contrataciones</div>
-                            <div class="mock-btn">Concursos</div>
-                            <div class="mock-btn">Trámites</div>
-                        </div>
-                    </div>
+            <section id="medios-entretenimiento">
+                <h3>Plataformas y Educación Financiera</h3>
+                <div class="slide-flex">
+                    <img src="imagenes/bio4.png" alt="Netflix" style="max-width: 40%;">
+                    <img src="imagenes/bio5.png" alt="Subamos el Volumen - Podcast">
                 </div>
             </section>
 
-            <!-- DIAPOSITIVA 16: CONDICIÓN -->
-            <section>
-                <h2>REGLAS DE JUEGO: Condición</h2>
-                <div class="three-blocks-row space-top">
-                    <div class="status-block bg-lightgreen">PROMOCIONAL</div>
-                    <div class="status-block bg-lightyellow">REGULAR</div>
-                    <div class="status-block bg-lightred">LIBRE</div>
+            <section id="paradoja-agua">
+                <h3>La Economía detrás de una Botella de Agua</h3>
+                <div class="slide-flex">
+                    <img src="imagenes/twitt-agua.jpg" alt="Tuit Original Carolina Albano" style="max-height: 400px;">
+                    <img src="imagenes/la-economía-atras-de-una-botella-de-agua.jpg" alt="Infografía del valor por contexto" style="max-height: 400px;">
                 </div>
+                <p style="font-size: 0.5em; opacity: 0.8; margin-top: 10px;">Análisis del valor subjetivo y de mercado según el entorno.</p>
             </section>
 
-            <!-- DIAPOSITIVA 17: SISTEMA APROBACIÓN -->
-            <section>
-                <h3>REGLAS DE JUEGO: Sistema de Aprobación</h3>
-                <div class="rules-table-container space-top">
-                    <table class="rules-table">
-                        <tbody>
-                            <tr class="row-promo">
-                                <td class="td-title bg-lightgreen"><strong>PROMOCIÓN</strong></td>
-                                <td>Aprobar los 2 parciales con un mínimo de 7 (siete) + Asistencia 75%</td>
-                            </tr>
-                            <tr class="row-regular">
-                                <td class="td-title bg-lightyellow"><strong>REGULAR</strong></td>
-                                <td>Aprobar los 2 parciales (con opción 1 recuperatorio) con un mínimo de 6 (seis) + Asistencia 75%</td>
-                            </tr>
-                            <tr class="row-free">
-                                <td class="td-title bg-lightred"><strong>LIBRE</strong></td>
-                                <td>No haber cumplido con las anteriores condiciones</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <section id="precios-cuidados">
+                <h3>Efectos de la Intervención de Precios</h3>
+                <img src="imagenes/precios-cuidados.jpg" alt="Góndola vacía - Precios Cuidados">
+                <p style="font-size: 0.6em; color: #ffb74d;">"Lo esencial es invisible a los ojos" - Escasez en góndola.</p>
             </section>
 
-            <!-- DIAPOSITIVA 18: RENDIMIENTO EXÁMENES -->
-            <section>
-                <h3>REGLAS DE JUEGO: Parciales Año 2025</h3>
-                <div class="two-columns space-top">
-                    <div class="col text-center">
-                        <p class="chart-label"><strong>Primer Parcial</strong><br><span class="text-green">+50% aprobación</span></p>
-                        <div class="mock-chart-bars">
-                            <!-- Simulación de histograma de notas 1 al 10 -->
-                            <div class="bar" style="height:10%"></div>
-                            <div class="bar" style="height:25%"></div>
-                            <div class="bar" style="height:35%"></div>
-                            <div class="bar" style="height:40%"></div>
-                            <div class="bar" style="height:38%"></div>
-                            <div class="bar" style="height:45%"></div>
-                            <div class="bar" style="height:90%"></div>
-                            <div class="bar" style="height:70%"></div>
-                            <div class="bar" style="height:40%"></div>
-                            <div class="bar" style="height:15%"></div>
-                        </div>
-                        <div class="chart-axis-x">1 2 3 4 5 6 7 8 9 10</div>
-                    </div>
-                    <div class="col text-center">
-                        <p class="chart-label"><strong>Segundo Parcial</strong><br><span class="text-orange">50% aprobación</span></p>
-                        <div class="mock-chart-bars">
-                            <div class="bar" style="height:15%"></div>
-                            <div class="bar" style="height:30%"></div>
-                            <div class="bar" style="height:45%"></div>
-                            <div class="bar" style="height:35%"></div>
-                            <div class="bar" style="height:50%"></div>
-                            <div class="bar" style="height:55%"></div>
-                            <div class="bar" style="height:65%"></div>
-                            <div class="bar" style="height:60%"></div>
-                            <div class="bar" style="height:30%"></div>
-                            <div class="bar" style="height:10%"></div>
-                        </div>
-                        <div class="chart-axis-x">1 2 3 4 5 6 7 8 9 10</div>
-                    </div>
-                </div>
+            <section id="definicion-economia">
+                <h3>¿Qué es la Economía?</h3>
+                <img src="imagenes/q-es-la-economía.png" alt="Definición de Economía - Recursos y Necesidades">
             </section>
 
-            <!-- DIAPOSITIVA 19: CIERRE REGLAS -->
-            <section data-background-color="#e53e3e">
-                <h2 class="light-text font-xl">Hasta acá las Reglas de Juegos</h2>
-                <h1 class="light-text font-xxl space-top">¿DUDAS?</h1>
-                <p class="light-text center-paragraph space-top">Alguna duda???</p>
-                <div class="consensus-box">
-                    ESTE ES EL MOMENTO DE HABLAR, PASAMOS Y QUEDAMOS CON LAS REGLAS DE JUEGOS FIJAS Y CONSENSUADAS
-                </div>
+            <section id="competencia">
+                <h3>Competencia y Fijación de Precios</h3>
+                <img src="imagenes/huevos.jpg" alt="Guerra de precios - Maples de Huevos">
+                <p style="font-size: 0.6em;">Estudio de caso dinámico de libre mercado y competencia directa.</p>
             </section>
 
-            <!-- DIAPOSITIVA 20: BIBLIOGRAFÍA TRIÁDICA -->
-            <section>
-                <h2>BIBLIOGRAFÍA</h2>
-                <div class="center space-top">
-                    <!-- Gráfico de torta o círculos concéntricos triádicos -->
-                    <div class="circle-chart-container">
-                        <div class="sector s1"><span>Clases</span></div>
-                        <div class="sector s2"><span>Interés Social</span></div>
-                        <div class="sector s3"><span>Estudio Personal</span></div>
-                    </div>
-                </div>
+            <section id="hablemos-sin-saber">
+                <h3>Economía: ¿Hablemos sin Saber?</h3>
+                <img src="imagenes/charlas-de-cafe.jpg" alt="Sin Codificar - Hablemos sin saber">
+                <p style="font-size: 0.6em; color: #e57373;">La importancia de separar la opinión vulgar del análisis científico.</p>
             </section>
 
-            <!-- DIAPOSITIVA 21: APLICACIONES Y MEDIOS -->
-            <section>
-                <h3>BIBLIOGRAFÍA</h3>
-                <p class="link-header"><a href="http://kiosko.net/" target="_blank">http://kiosko.net/</a></p>
-                <div class="media-grid-container space-top">
-                    <div class="grid-app-mock">📱 Diarios Argentinos (Dólar Oficial: 20.09)</div>
-                    <div class="grid-app-mock bg-black text-green">🔊 SUBAMOS EL VOLUMEN (Finanzas)</div>
-                    <div class="grid-app-mock bg-grey">📺 C5N / CRONICA / TN / TELEFE / CANAL 13</div>
-                    <div class="grid-app-mock bg-lightgrey">💬 Redes: WA, IG, YT, FB, TW, LI</div>
-                </div>
+            <section id="positiva-normativa">
+                <h3>Diferenciación Epistemológica</h3>
+                <img src="imagenes/economia-positiva-normativa.jpg" alt="Cuadro Comparativo Positiva vs Normativa">
             </section>
 
-            <!-- DIAPOSITIVA 22: INFOGRAFÍA IA 2025 -->
-            <section>
-                <h4>Growit: MEJORES APPS DE IA 2025</h4>
-                <div class="ia-table-grid">
-                    <div class="ia-row"><span class="ia-cat">ASISTENTES:</span> <span>ChatGPT</span> <span>Gemini</span> <span>Claude</span> <span>Perplexity</span> <span>Llama</span></div>
-                    <div class="ia-row"><span class="ia-cat">PRODUCTIVIDAD:</span> <span>Notion AI</span> <span>Fireflies</span> <span>Notebook LM</span> <span>Gamma</span> <span>Superhuman</span></div>
-                    <div class="ia-row"><span class="ia-cat">AUTOMATIZACIÓN:</span> <span>Make</span> <span>n8n</span> <span>LangChain</span> <span>Voiceflow</span> <span>Manychat</span></div>
-                    <div class="ia-row"><span class="ia-cat">AUDIOVISUAL:</span> <span>Midjourney</span> <span>Runway</span> <span>Kling</span> <span>CapCut</span> <span>Descript</span> <span>Heygen</span> <span>Sora 2</span></div>
-                    <div class="ia-row"><span class="ia-cat">DESARROLLO:</span> <span>Devin AI</span> <span>GitHub</span> <span>Cursor</span> <span>Replit</span> <span>Bolt</span></div>
-                </div>
+            <section id="ejercicios-enfoques">
+                <h3>¿Positiva o Normativa? Enunciados Prácticos</h3>
+                <img src="imagenes/ej.jpg" alt="Ejemplos prácticos de enunciados económicos">
             </section>
 
-            <!-- DIAPOSITIVA 23: INTRO CONTENIDO -->
-            <section data-background-color="#2b6cb0">
-                <h2 class="light-text font-xl">Qué es lo vamos a ver en Economía Política</h2>
+            <section id="caso-autos">
+                <h3>Análisis de Caso: Mercado Automotor 2025</h3>
+                <img src="imagenes/ej2.png" alt="Artículo periodístico sobre baja de impuestos a autos de alta gama">
             </section>
 
-            <!-- DIAPOSITIVA 24: AGRONOMÍA VS ECONOMÍA -->
-            <section>
-                <h2>AGRONOMÍA y/o/vs ECONOMÍA</h2>
-                <div class="flow-row space-top">
-                    <div class="flow-block-left">AGRONOMÍA</div>
-                    <div class="arrow-right">➔</div>
-                    <div class="flow-block-right border-red">Generación <strong class="text-red">SUSTENTABLE</strong> de Alimentos</div>
-                </div>
-                <div class="flow-row space-top">
-                    <div class="flow-block-left">ECONOMÍA</div>
-                    <div class="arrow-right">➔</div>
-                    <div class="flow-block-right border-red"><strong class="text-red">MODELIZA</strong> fenómenos con impactos sociales (personas)</div>
-                </div>
-                <h3 class="space-top text-center text-blue font-large">Diferencia FUNDAMENTAL</h3>
+            <section id="caso-senadores">
+                <h3>Juicios de Valor y Realidad Salarial</h3>
+                <img src="imagenes/ej3.png" alt="Noticia sobre propuesta salarial de Lousteau para senadores">
             </section>
 
-            <!-- DIAPOSITIVA 25: ECONOMÍA POLÍTICA VS POLÍTICA ECONÓMICA -->
-            <section>
-                <div class="two-columns">
-                    <div class="col concept-split-box">
-                        <h3 class="bg-darkblue text-white pad-10">ECONOMÍA POLITICA</h3>
-                        <h4 class="space-top text-blue font-medium">ESTUDIO DE SABERES</h4>
-                        <ul class="clean-list">
-                            <li>Teorías, pensamientos</li>
-                            <li>Modelizaciones</li>
-                            <li>Relación entre la producción y el intercambio</li>
-                        </ul>
-                    </div>
-                    <div class="col concept-split-box">
-                        <h3 class="bg-darkblue text-white pad-10">POLITICA ECONÓMICA</h3>
-                        <h4 class="space-top text-blue font-medium">MODIFICA EL COMPORTAMIENTO</h4>
-                        <ul class="clean-list">
-                            <li>Práctica, aplicar los conceptos teóricos a la política.</li>
-                            <li>Política Fiscal, Monetaria, Cambiarias, etc</li>
-                        </ul>
-                    </div>
-                </div>
+            <section id="herramientas-ia">
+                <h3>Ecosistema Tecnológico de Soporte</h3>
+                <img src="imagenes/ia.jpg" alt="Mejores Apps de IA en 2025">
             </section>
 
-            <!-- DIAPOSITIVA 26: DEFINICIÓN DE LIBRO -->
-            <section>
-                <h3>Economía: Definición de libro</h3>
-                <div class="text-book-box space-top">
-                    <p>Es una <strong>Ciencia Social</strong> que estudia la:</p>
-                    <p class="indent-text"><strong>i. Extracción</strong> (sector primario),</p>
-                    <p class="indent-text"><strong>ii. Producción</strong> (sector secundario) e</p>
-                    <p class="indent-text"><strong>iii. Intercambio, distribución y consumo</strong> (sector terciario) de los bienes y/o servicios</p>
-                    <p class="space-top">Y la forma de satisfacer las múltiples y crecientes necesidades humanas mediante los recursos que son limitados y escasos.</p>
-                </div>
-                <h4 class="space-top text-center text-red font-large">¿Se mantiene en la actualidad esta definición?</h4>
-            </section>
-
-            <!-- DIAPOSITIVA 27: MALTHUS -->
-            <section>
-                <h3>La Sobrepoblación y Limitación de los Recursos</h3>
-                <h4>Thomas Malthus (Siglo XIX)</h4>
-                <div class="two-columns space-top">
-                    <div class="col text-left-side font-small">
-                        <p class="text-underline">Rendimientos decrecientes</p>
-                        <p>El crecimiento de la población generó una disminución de la relación entre recursos fijos (limitados, como tierra y minerales) y población.</p>
-                        <p class="space-top">El crecimiento de la población se da <strong>Geométrica</strong> y el crecimiento de los recursos en proporciones <strong>Aritmética</strong></p>
-                        <p class="text-red font-medium space-top">Catastrofe Malthusiana</p>
-                    </div>
-                    <div class="col center">
-                        <div class="portrait-placeholder">
-                            <span>[ Retrato de Thomas Malthus - Economista Inglés ]</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- DIAPOSITIVA 28: BOSERUP VS SIMON -->
-            <section>
-                <div class="two-columns">
-                    <div class="col comparison-card-blue">
-                        <h3>ESTER BOSERUP</h3>
-                        <p class="quote-italic">“La presión demográfica estimula la innovación agrícola.” (1965)</p>
-                        <p class="card-desc">Sostenía que el crecimiento de la población podía impulsar el desarrollo si iba acompañado de mejoras tecnológicas e institucionales</p>
-                    </div>
-                    <div class="col comparison-card-blue">
-                        <h3>JULIAN SIMON</h3>
-                        <p class="quote-italic">“Los seres humanos son el recurso en última instancia.” (1981)</p>
-                        <p class="card-desc">Afirmaba que la inteligencia humana y la innovación son más importantes que la escasez física de recursos</p>
-                    </div>
-                </div>
-                <div class="footer-highlight-teal space-top">
-                    La tecnología es clave para alimentar a una población creciente.
-                </div>
-            </section>
-
-            <!-- DIAPOSITIVA 29: GRÁFICO POBLACIÓN -->
-            <section>
-                <h3>La Sobrepoblación y Limitación de los Recursos</h3>
-                <div class="two-columns space-top">
-                    <div class="col center">
-                        <div class="malthus-graph-box">
-                            <!-- Simulación de las curvas del gráfico original -->
-                            <svg viewBox="0 0 150 100" width="100%">
-                                <path d="M10 80 Q 80 75 140 30" stroke="green" stroke-width="3" fill="none"/> <!-- Boserup -->
-                                <path d="M10 85 Q 90 60 140 10" stroke="blue" stroke-width="3" fill="none"/> <!-- Population -->
-                                <line x1="10" y1="88" x2="140" y2="55" stroke="red" stroke-width="3"/> <!-- Malthus -->
-                                <text x="110" y="25" fill="green" font-size="6" font-weight="bold">Boserup</text>
-                                <text x="110" y="48" fill="red" font-size="6" font-weight="bold">Malthus</text>
-                                <text x="40" y="55" fill="blue" font-size="6">Population</text>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="col text-left-side font-medium">
-                        <p class="text-blue">Boserup: Rendimientos crecientes</p>
-                        <p class="text-red">"Malthusian Catastrophe"</p>
-                        <hr class="divider">
-                        <p><strong>2.500 M</strong> Personas (1950)</p>
-                        <p><strong>2025</strong> hay casi <strong>8.300 M</strong></p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- DIAPOSITIVA 30: CAUSAS DE MUERTE -->
-            <section>
-                <h3>Principales Causas de Muerte</h3>
-                <p class="table-sub">Gráfico 1.1 Cambios previstos para las 10 principales causas de la carga de morbilidad en 2004 y 2030</p>
-                <div class="table-container scrollable-table">
-                    <table class="data-sheet-table">
-                        <thead>
-                            <tr>
-                                <th>2004 Posición</th>
-                                <th>Enfermedad o traumatismo</th>
-                                <th>% AVAD</th>
-                                <th>2030 Posición</th>
-                                <th>Enfermedad o traumatismo</th>
-                                <th>% AVAD</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>1</td><td>Infecciones de las vías respiratorias inferiores</td><td>6,2</td><td>1</td><td>Trastornos depresivos unipolares</td><td>6,2</td></tr>
-                            <tr><td>2</td><td>Enfermedades diarreicas</td><td>4,8</td><td>2</td><td>Cardiopatía isquémica</td><td>5,5</td></tr>
-                            <tr><td>3</td><td>Trastornos depresivos unipolares</td><td>4,3</td><td>3</td><td>Accidentes de tránsito</td><td>4,9</td></tr>
-                            <tr><td>4</td><td>Cardiopatía isquémica</td><td>4,1</td><td>4</td><td>Enfermedades cerebrovasculares</td><td>4,3</td></tr>
-                            <tr><td>5</td><td>Infección por el VIH/sida</td><td>3,8</td><td>5</td><td>Enfermedad pulmonar obstructiva crónica</td><td>3,8</td></tr>
-                            <tr><td>6</td><td>Enfermedades cerebrovasculares</td><td>3,1</td><td>6</td><td>Infecciones de las vías respiratorias inferiores</td><td>3,2</td></tr>
-                            <tr><td>7</td><td>Prematuridad y bajo peso al nacer</td><td>2,9</td><td>7</td><td>Errores de refracción</td><td>2,9</td></tr>
-                            <tr><td>8</td><td>Pérdida de audición, aparición en el adulto</td><td>2,7</td><td>8</td><td>Infección por el VIH/sida</td><td>2,7</td></tr>
-                            <tr><td>9</td><td>Asfixia y traumatismo en el nacimiento</td><td>2,7</td><td>9</td><td>Diabetes mellitus</td><td>2,5</td></tr>
-                            <tr><td>10</td><td>Accidentes de tránsito</td><td>2,7</td><td>10</td><td>Infecciones y otras enfermedades neonatales</td><td>2,3</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="table-source-footer"><a href="https://www.wto.org/spanish/tratop_s/trips_s/trilatweb_s/ch1c_trilat_web_13_s.htm" target="_blank">Fuente: WTO OMS</a></p>
-            </section>
-
-            <!-- DIAPOSITIVA 31: RENDIMIENTOS AGROPECUARIOS -->
-            <section>
-                <h3>La Sobrepoblación y Limitación de los Recursos</h3>
-                <h4>Rendimientos Crecientes (limites en CP)</h4>
-                <p class="slide-text font-small">En 50 años: la producción de grano por hectárea se duplicó:</p>
-                <div class="two-columns">
-                    <div class="col font-small list-left">
+            <section id="thomas-malthus">
+                <h3>Thomas Malthus y los Límites del Crecimiento</h3>
+                <div class="slide-flex">
+                    <img src="imagenes/TM.png" alt="Thomas Malthus Retrato" style="max-height: 380px;">
+                    <div style="font-size: 0.65em; text-align: left; max-width: 50%;">
+                        <p><strong>Teoría Malthusiana:</strong></p>
                         <ul>
-                            <li><strong>Maíz:</strong> paso de 2 t/ha en 1960 a más de 6 t/ha en promedio mundial (en EE. UU. supera las 10 t/ha).</li>
-                            <li><strong>Trigo y arroz:</strong> duplicaron o triplicaron su productividad.</li>
-                            <li><strong>Soja:</strong> aumentó cerca del 80% desde 1960.</li>
-                        </ul>
-                        <div class="comparison-foot-box space-top">
-                            <p>Hoy son necesarios menos de <strong>1.200 m²</strong> de terreno para alimentar a una persona al año.</p>
-                            <p>En la época romana se precisaban más de <strong>13.000 m²</strong>.</p>
-                        </div>
-                    </div>
-                    <div class="col center">
-                        <div class="chart-crops-mock">
-                            <svg viewBox="0 0 120 100" width="100%">
-                                <line x1="15" y1="10" x2="15" y2="90" stroke="black"/>
-                                <line x1="15" y1="90" x2="110" y2="90" stroke="black"/>
-                                <path d="M15 80 L40 60 L75 40 L110 15" stroke="blue" stroke-width="2" fill="none" stroke-dasharray="2"/> <!-- Maiz -->
-                                <path d="M15 85 L50 70 L80 55 L110 35" stroke="green" stroke-width="2" fill="none"/> <!-- Arroz -->
-                                <text x="112" y="18" fill="blue" font-size="5">Maíz</text>
-                                <text x="112" y="38" fill="green" font-size="5">Arroz</text>
-                            </svg>
-                            <p class="chart-caption-text">World Yields of Staple Food Crops</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- DIAPOSITIVA 32: DEFINICIÓN TRADICIONAL VS ACTUAL -->
-            <section>
-                <h3>ECONOMÍA: Definición Tradicional vs Actual</h3>
-                <div class="matrix-cross space-top">
-                    <div class="m-box bg-darkblue text-white">BIENES y/o SERVICIOS<br><small>Renovables y Agotables</small></div>
-                    <div class="m-box bg-darkblue text-white">NECESIDADES HUMANAS<br><small>Presentes y Futuras</small></div>
-                    <div class="m-box border-red font-medium">Escasos y Limitados</div>
-                    <div class="m-box border-red font-medium">Crecientes e Ilimitados</div>
-                </div>
-                <div class="cross-lines-visual">⚡ Estructura en Tensión Continua</div>
-            </section>
-
-            <!-- DIAPOSITIVA 33: CAUSA Y EFECTO -->
-            <section>
-                <h2>Economía: Separar Causa y Efecto</h2>
-                <div class="two-columns space-top">
-                    <div class="col sub-box-ce bg-lightgrey">
-                        <h4>ECONOMÍA POSITIVA</h4>
-                        <p class="text-underline font-medium">Es lo que ES.</p>
-                        <ul>
-                            <li>Lo que se cree en ese momento sobre la manera como funciona el mundo.</li>
-                            <li>Descripción objetiva.</li>
-                            <li>Se basa en resultados y datos oficiales.</li>
-                            <li>Puede ser correcta o incorrecta.</li>
-                        </ul>
-                    </div>
-                    <div class="col sub-box-ce bg-lightyellow">
-                        <h4>ECONOMÍA NORMATIVA</h4>
-                        <p class="text-underline font-medium">Lo que yo creo que DEBE SER.</p>
-                        <ul>
-                            <li>Depende de valores y creencias personales.</li>
-                            <li>Descripción subjetiva.</li>
-                            <li>Se puede estar de acuerdo o en desacuerdo, no se someten a pruebas.</li>
+                            <li>Población crece de forma geométrica (exponencial).</li>
+                            <li>Alimentos crecen de forma aritmética (lineal).</li>
+                            <li>Resultado fatalista: Catástrofe e insuficiencia de recursos.</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- DIAPOSITIVA 34: EJEMPLOS POSITIVA Y NORMATIVA -->
-            <section>
-                <h3>EJEMPLOS DE ECONOMÍA POSITIVA Y ECONOMÍA NORMATIVA</h3>
-                <div class="two-columns space-top">
-                    <div class="col table-example-box">
-                        <h4 class="bg-blue text-white font-medium pad-5 text-center">ECONOMÍA POSITIVA</h4>
-                        <ul class="example-items">
-                            <li>La inflación anual fue del 10%.</li>
-                            <li>Una reducción de impuestos eleva la demanda de bienes.</li>
-                        </ul>
-                    </div>
-                    <div class="col table-example-box">
-                        <h4 class="bg-red text-white font-medium pad-5 text-center">ECONOMÍA NORMATIVA</h4>
-                        <ul class="example-items">
-                            <li>El gobierno debería controlar la inflación.</li>
-                            <li>Los impuestos deben reducirse para incentivar el ahorro.</li>
-                        </ul>
-                    </div>
-                </div>
+            <section id="boserup-simon">
+                <h3>La Respuesta Tecnológica: Boserup y Simon</h3>
+                <img src="imagenes/ester.jpg" alt="Placa comparativa Ester Boserup y Julian Simon">
             </section>
 
-            <!-- DIAPOSITIVA 35: PREGUNTAS CLAVE -->
-            <section>
-                <h3>Ejemplos...</h3>
-                <div class="two-columns space-top">
-                    <div class="col examples-card-split border-blue">
-                        <h4 class="text-blue font-medium">Economía Positiva</h4>
-                        <ul class="clean-list-dash">
-                            <li>¿Qué pasa si suben los impuestos?</li>
-                            <li>¿Si aumenta el salario mínimo, aumenta el desempleo?</li>
-                        </ul>
-                    </div>
-                    <div class="col examples-card-split border-red">
-                        <h4 class="text-red font-medium">Economía Normativa</h4>
-                        <ul class="clean-list-dash">
-                            <li>¿Hay que poner más impuestos a los bienes de lujo?</li>
-                            <li>¿Los salarios están muy bajos, debe mejorarse la situación de las familias?</li>
-                        </ul>
-                    </div>
-                </div>
+            <section id="grafico-malthus-boserup">
+                <h3>Modelo Teórico de Sobreexplotación de Alimentos</h3>
+                <img src="imagenes/sobreexplotacion-alimentos.png" alt="Gráfico Curva de Población vs Recursos Malthus y Boserup">
             </section>
 
-            <!-- DIAPOSITIVA 36: CASO REAL ARGENTINA 2024/2025 -->
-            <section>
-                <div class="news-mockup-container">
-                    <div class="news-header">Enfoque jueves 30 de enero | 2025</div>
-                    <div class="news-body">
-                        <h3 class="news-title">Baja de impuestos a autos de alta gama en Argentina: expectativas para 2025 y la realidad del mercado automotor en 2024</h3>
-                        <p class="news-text">En un contexto económico complejo, el gobierno argentino anunció en 2024 una reducción significativa de los impuestos para los autos de alta gama. Esta medida, esperada por sectores del mercado automotor, tiene como objetivo reactivar la venta de vehículos de lujo y, al mismo tiempo, atraer inversiones en un sector clave de la economía nacional. Sin embargo, la medida llega en un momento de incertidumbre económica, con un mercado marcado por altos niveles de inflación y una creciente disparidad entre los precios de los vehículos nacionales e importados.</p>
-                    </div>
-                </div>
+            <section id="productividad-agro">
+                <h3>Evidencia Histórica: Rendimiento de Cultivos</h3>
+                <img src="imagenes/productividad.png" alt="Gráfico de Líneas - World Yields of Staple Food Crops">
+                <p style="font-size: 0.5em; opacity: 0.8;">Evolución de rendimientos en Maíz, Arroz, Trigo y Soja (1961-2020).</p>
             </section>
 
-            <!-- DIAPOSITIVA 37: CASO REAL SALARIOS SENADORES -->
-            <section>
-                <div class="news-mockup-container border-top-red">
-                    <div class="news-header-red">Aumento salarial. Lousteau propuso que los senadores cobren igual que un director de escuela</div>
-                    <div class="news-body">
-                        <p class="news-highlight-banner">Se conoció el incremento de un 9,14% desde junio y cobrarán cerca de 8 millones de pesos mensuales.</p>
-                        <p class="news-date-footer">29 de mayo de 2024, 16:12</p>
-                    </div>
-                </div>
+            <section id="causas-mortalidad">
+                <h3>Proyección de Carga Global de Morbilidad</h3>
+                <img src="imagenes/causas-muerte.jpg" alt="Gráfico Comparativo de Causas de Muerte 2004 vs 2030">
+            </section>
+
+            <section data-background-gradient="linear-gradient(to top, #1e522f, #091f11)">
+                <h2>Muchas Gracias</h2>
+                <p style="color: #a2c4ab;">¿Preguntas o comentarios?</p>
+                <p style="font-size: 0.6em; opacity: 0.7; margin-top: 50px;">Cátedra de Economía Política<br>FCA - UNNE</p>
             </section>
 
         </div>
     </div>
 
-    <!-- Carga de Reveal.js principal -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.js"></script>
+    <script>
+        // Inicialización básica de Reveal.js para navegación fluida
+        Reveal.initialize({
+            hash: true,
+            slideNumber: 'c/t', // Muestra el número de diapositiva actual y total
+            transition: 'slide', // Efecto de transición lateral
+            controls: true,
+            progress: true,
+            center: true
+        });
+    </script>
 </body>
 </html>
